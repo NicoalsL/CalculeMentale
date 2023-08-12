@@ -1,15 +1,16 @@
-export function setScore(element){
+export function setScore(element, div, vies, score){
     const jeux = document.querySelector(".contenaire")
-    jeux.classList.remove("bonneReponse")
-    const div = document.querySelectorAll(".contenaire div")
+    // jeux.classList.remove("bonneReponse")
+    // div[2].remove
     const ligneScore = document.createElement('h1')
-    element.appendChild(ligneScore)
+    div[0].appendChild(ligneScore)
+
     ligneScore.classList = "classLigneScore"
     ligneScore.innerHTML =`Score: ${score}`
 
-    tempsScore()
+    // tempsScore()
 
     setTimeout(() =>{
-        element.removeChild(ligneScore)
+        div[0].removeChild(ligneScore)
     },1000)
 }
