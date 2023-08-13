@@ -1,4 +1,6 @@
-export function setScore(element, div, vies, score){
+export function setScore(element, div, newVies, score){
+    console.log("score", newVies)
+
     const jeux = document.querySelector(".contenaire")
     // jeux.classList.remove("bonneReponse")
     // div[2].remove

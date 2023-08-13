@@ -1,7 +1,9 @@
 import { setRandom } from './Random.js'
 import { regle } from './regle.js'
 
-export function setAffichageJeu(element, div, resulat, score, vies) {
+export function setAffichageJeu(element, div, resulat, score, newVies) {
+    console.log("vies", newVies)
+
     const calcul = document.createElement('h1')
     div[2].appendChild(calcul)
     calcul.classList = "classCalcul"
@@ -16,7 +18,7 @@ export function setAffichageJeu(element, div, resulat, score, vies) {
     const afiVie = document.createElement('h1')
     div[1].appendChild(afiVie)
     afiVie.classList = "classVie"
-    afiVie.innerHTML = `Vie : ${vies}`
+    afiVie.innerHTML = `Vie : ${newVies}`
 
     calcul.innerHTML = `${nombreUn} + ${nombreDeux} = `
     const input = document.createElement('input')
@@ -28,7 +30,7 @@ export function setAffichageJeu(element, div, resulat, score, vies) {
             console.log(input)
             console.log(input.value)
             console.log(resulat)
-            regle(element, div, resulat, score, vies, afiVie)
+            regle(element, div, resulat, score, newVies, afiVie, calcul, input)
         }}
         )
 

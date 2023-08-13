@@ -105,7 +105,7 @@ body{
 }
 
 .start{
-  background-color: #646cff;
+  background-color: #ffffff;
   height: 500px;
   width: 500px;
   display: flex;
@@ -117,7 +117,7 @@ body{
 }
 
 .start div {
-  background-color: #eb3434;
+  background-color: #ffffff;
   height: 50px;
   width: 350px;
   margin: 10px;

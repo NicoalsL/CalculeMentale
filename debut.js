@@ -1,6 +1,7 @@
 import { setAffichageJeu } from './jeu.js'
 
-export function setDebut(element, div, resulat, score, vies) {
+export function setDebut(element, div, resulat, score, newVies) {
+    console.log("debut", newVies)
 
     const boutonCommencer = document.createElement('button');
     div[2].appendChild(boutonCommencer)
@@ -8,7 +9,7 @@ export function setDebut(element, div, resulat, score, vies) {
     boutonCommencer.addEventListener('click', function(){
 
         div[2].removeChild(boutonCommencer)
-        setAffichageJeu(element, div, resulat, score, vies)
+        setAffichageJeu(element, div, resulat, score, newVies)
 
 
     })
