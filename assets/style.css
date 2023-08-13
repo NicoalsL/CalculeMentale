@@ -137,6 +137,8 @@ body{
   color: white;
   font-family: sans-serif;
   border-radius: 10px;
+  cursor:pointer;
+  /* border: #d1212d 3px solid; */
 }
 
 .start div button:active {
