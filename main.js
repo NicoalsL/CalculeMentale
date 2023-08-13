@@ -6,9 +6,6 @@ let nombreUn = 0;
 let nombreDeux = 0;
 let resulat = nombreUn + nombreDeux
 
-let vies = 3;
-let score = 0;
-
 document.querySelector('#app').innerHTML = `
   <div id="div" class="start">
   <div></div>
@@ -18,8 +15,7 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 const div = document.querySelectorAll('#div div'); 
-console.log("Main", vies)
-setDebut(document.querySelector('#div') , div, resulat, score, vies)
+setDebut(document.querySelector('#div') , div, resulat)
 
 {/* <a href="https://vitejs.dev" target="_blank">
 <img src="${viteLogo}" class="logo" alt="Vite logo" />

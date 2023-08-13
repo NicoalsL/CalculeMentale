@@ -1,7 +1,8 @@
 import { setRandom } from './Random.js'
 import { regle } from './regle.js'
+import { getVie } from './scoring/vie.js'
 
-export function setAffichageJeu(element, div, resulat, score, newVies) {
+export function setAffichageJeu(element, div, resulat, newVies) {
     console.log("vies", newVies)
 
     const calcul = document.createElement('h1')
@@ -18,7 +19,7 @@ export function setAffichageJeu(element, div, resulat, score, newVies) {
     const afiVie = document.createElement('h1')
     div[1].appendChild(afiVie)
     afiVie.classList = "classVie"
-    afiVie.innerHTML = `Vie : ${newVies}`
+    afiVie.innerHTML = `Vie : ${getVie()}`
 
     calcul.innerHTML = `${nombreUn} + ${nombreDeux} = `
     const input = document.createElement('input')
@@ -30,7 +31,8 @@ export function setAffichageJeu(element, div, resulat, score, newVies) {
             console.log(input)
             console.log(input.value)
             console.log(resulat)
-            regle(element, div, resulat, score, newVies, afiVie, calcul, input)
+            console.log("affichevie", afiVie)
+            regle(element, div, resulat, afiVie, calcul, input)
         }}
         )
 

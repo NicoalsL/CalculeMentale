@@ -1,16 +1,16 @@
 import { setAffichageJeu } from './jeu.js'
 
-export function setDebut(element, div, resulat, score, newVies) {
-    console.log("debut", newVies)
+export function setDebut(element, div, resulat) {
 
     const boutonCommencer = document.createElement('button');
     div[2].appendChild(boutonCommencer)
     boutonCommencer.innerHTML = "Jouer"
+
     boutonCommencer.addEventListener('click', function(){
 
         div[2].removeChild(boutonCommencer)
-        setAffichageJeu(element, div, resulat, score, newVies)
 
+        setAffichageJeu(element, div, resulat)
 
     })
     }
