@@ -1,6 +1,5 @@
-import './style.css'
-import { setDebut } from './debut.js'
-import { setRandom } from './Random.js'
+import './assets/style.css'
+import { setDebut } from '../pages/debut.js'
 
 let nombreUn = 0;
 let nombreDeux = 0;

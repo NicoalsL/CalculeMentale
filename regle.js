@@ -1,41 +1,40 @@
-import { setScore } from "./score"
-import { setAffichageJeu } from "./jeu"
-import { getVie, perdreVie } from "./scoring/vie"
-export function regle(element, div, resulat, afiVie, calcul, input){
+import { pageScore } from "./pages/score"
+import { getVie, perdreVie, supprimerVie } from "./scoring/vie"
+import { ajoutScore } from "./scoring/score"
+import { defaite } from "./pages/defaite"
+export function regle(element, div, resulat, calcul, input){
     
-    console.log("affichevie", afiVie)
     console.log("affiche calcule", calcul)
 
     const classInput = document.querySelector(".classInput")
     const classVie = document.querySelector(".classVie")
 
-    console.log(afiVie)
-    console.log("affichevie", afiVie)
 
-    if( resulat == classInput.value ){
+    if( resulat === parseInt(classInput.value)  ){
         console.log("bonne reponse")
-        console.log(afiVie)
-
-        console.log(element)
-        console.log(div)
-        div[1].removeChild(afiVie)
+        ajoutScore()
+        supprimerVie(div)
         div[2].removeChild(calcul)
         div[2].removeChild(input)
-        setScore(element, div )
-        setAffichageJeu(element, div, resulat)
+        pageScore(element, div )
+        // setAffichageJeu(element, div, resulat)
+        // setAffichageJeu(element, div)
     }else{
-        if( getVie() == 1 ){
+        if( getVie() === 1 ){
             console.log("fini")
             // score = 0
-            defaite++
-            affichageDefaite()
+            // defaite++
+            defaite()
         }
         else {
             console.log("mauvaise reponse")
             perdreVie()
             classVie.innerHTML = `Vie : ${getVie()}`
             classInput.value = []
-            setScore(element, div, score)
+            supprimerVie(div)
+            div[2].removeChild(calcul)
+            div[2].removeChild(input)
+            pageScore(element, div)
         }
     }
 }

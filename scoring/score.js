@@ -1,4 +1,4 @@
-let score = 3;
+let score = 0;
 
 export function getScore() {
     return score;
