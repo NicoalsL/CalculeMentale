@@ -128,7 +128,7 @@ body{
 
 }
 
-.start div button {
+.jouer{
   background-color: #02cc8f;
   box-shadow: 0 5px 0 #08ac7b;
   border: none;
@@ -141,9 +141,26 @@ body{
   /* border: #d1212d 3px solid; */
 }
 
-.start div button:active {
+.jouer:active {
   box-shadow: none;
   transform: translateY(5px);
+}
+
+.rejouer {
+  background-color: #cc0227 !important;
+  box-shadow: 0 5px 0 #970822 !important;
+  border: none;
+  margin: 10px;
+  padding: 10px 25px;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.rejouer:active{
+  box-shadow: none!important;
+  transform: translateY(5px)!important;
 }
 
 .start div input {

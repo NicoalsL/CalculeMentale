@@ -9,7 +9,7 @@ export function perdreScore() {
 }
 
 export function reinitialiserScore() {
-    score = 3;
+    score = 0;
 }
 
 export function ajoutScore(){
