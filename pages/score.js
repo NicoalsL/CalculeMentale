@@ -13,8 +13,6 @@ export function pageScore(div){
     setTimeout(() =>{
         div[1].removeChild(ligneScore)
     },1000)
-    //  setAffichageJeu(element, div)
-
 }
 function tempsScore(div){
     const scoreSec = setInterval(() => {   

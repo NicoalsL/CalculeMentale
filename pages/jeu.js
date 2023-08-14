@@ -1,22 +1,26 @@
 import { setRandom } from '../scoring/Random.js'
 import { regle } from '../regle.js'
 import { afficherVie } from '../scoring/vie.js'
-export function setAffichageJeu(resulat) {
+import { getArithmétique } from '../scoring/arithmétique.js'
+export function setAffichageJeu( resulat ) {
 
     const div = document.querySelectorAll('#div div')
     console.log("div", div)
     const calcul = document.createElement('h1')
-    div[2].appendChild(calcul)
     calcul.classList = "classCalcul"
+    div[2].appendChild(calcul)
+    const { typeOperation } = getArithmétique(resulat); // Utilisez destructuring pour extraire le résultat et le type d'opération
 
-    let nombreUn = setRandom(10)
-    let nombreDeux = setRandom(10)
-    resulat = nombreUn + nombreDeux
-
-    console.log(resulat)
+    // let nombreUn = setRandom(10)
+    // let nombreDeux = setRandom(10)
+    // resulat = nombreUn + nombreDeux
+    getArithmétique(resulat)
+    console.log("aritme", getArithmétique(resulat))
+    resulat = getArithmétique(resulat)
+    console.log("resultat", resulat)
     afficherVie(div)
 
-    calcul.innerHTML = `${nombreUn} + ${nombreDeux} = `
+    // calcul.innerHTML = `${nombreUn} + ${nombreDeux} = `
     const input = document.createElement('input')
     div[2].appendChild(input).focus()
     input.classList = "classInput"
@@ -25,7 +29,7 @@ export function setAffichageJeu(resulat) {
         if (event.key === "Enter") {
             console.log(input.value)
 
-            regle(div, resulat, calcul, input)
+            regle(div, resulat.resulat, calcul, input, resulat.typeOperation)
         }}
         )
 }

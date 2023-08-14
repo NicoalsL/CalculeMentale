@@ -12,9 +12,11 @@ export function rejouer(div, resulat){
     const h2 = document.createElement('h2')
     h2.innerHTML = `Score : ${getScore()} `
     div[1].appendChild(h2)
+
     button.addEventListener('click', () =>  {
 
         addDefaite()
+        div[1].removeChild(h2)
         div[2].removeChild(button)
         reinitialiserScore()
         reinitialiserVies()

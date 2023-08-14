@@ -129,8 +129,6 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  
 }
 
 .start div {
@@ -141,8 +139,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  
-
 }
 
 .jouer{
@@ -156,7 +152,9 @@ body{
   border-radius: 10px;
   cursor:pointer;
   font-family: 'Bricolage Grotesque', sans-serif !important;  
-
+  width: 150px;
+  height: 50px;
+  font-size: 24px;
   /* border: #d1212d 3px solid; */
 }
 
@@ -175,11 +173,13 @@ body{
   font-family: sans-serif;
   border-radius: 10px;
   cursor:pointer;
+  width: 150px;
+  height: 50px;
 }
 
 .rejouer:active{
-  box-shadow: none!important;
-  transform: translateY(5px)!important;
+  box-shadow: none !important;
+  transform: translateY(5px) !important;
 }
 
 .start div input {

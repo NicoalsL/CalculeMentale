@@ -1,4 +1,10 @@
 export function setRandom(max) {
-
-        return Math.floor(Math.random() * max)
-}
+        let randomNumber;
+        
+        do {
+            randomNumber = Math.floor(Math.random() * max);
+        } while (randomNumber === 0);
+        
+        return randomNumber;
+    }
+    

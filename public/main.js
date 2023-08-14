@@ -17,13 +17,7 @@ const div = document.querySelectorAll('#div div');
 setDebut(div, resulat)
 
 
-const symbole = [ "+", "-", "/", "x"];
 
-Math.floor(Math.random() * symbole.length)
-
-console.log(symbole)
-console.log(symbole)
-console.log(symbole)
 
 
 
