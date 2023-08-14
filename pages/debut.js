@@ -1,6 +1,6 @@
 import { setAffichageJeu } from './jeu.js'
 
-export function setDebut(element, div, resulat) {
+export function setDebut(div, resulat) {
 
     const boutonCommencer = document.createElement('button');
     div[2].appendChild(boutonCommencer)
@@ -11,7 +11,7 @@ export function setDebut(element, div, resulat) {
 
         div[2].removeChild(boutonCommencer)
 
-        setAffichageJeu(element, div, resulat)
+        setAffichageJeu(div, resulat)
 
     })
     }

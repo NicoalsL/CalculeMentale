@@ -14,7 +14,18 @@ document.querySelector('#app').innerHTML = `
   </div>
 `
 const div = document.querySelectorAll('#div div'); 
-setDebut(document.querySelector('#div') , div, resulat)
+setDebut(div, resulat)
+
+
+const symbole = [ "+", "-", "/", "x"];
+
+Math.floor(Math.random() * symbole.length)
+
+console.log(symbole)
+console.log(symbole)
+console.log(symbole)
+
+
 
 {/* <a href="https://vitejs.dev" target="_blank">
 <img src="${viteLogo}" class="logo" alt="Vite logo" />

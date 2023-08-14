@@ -3,7 +3,7 @@ import { getVie, perdreVie, supprimerVie } from "./scoring/vie"
 import { ajoutScore } from "./scoring/score"
 import { defaite } from "./pages/defaite"
 import { rejouer } from "./pages/rejouer"
-export function regle(element, div, resulat, calcul, input){
+export function regle(div, resulat, calcul, input){
     
     console.log("affiche calcule", calcul)
 
@@ -17,16 +17,15 @@ export function regle(element, div, resulat, calcul, input){
         supprimerVie(div)
         div[2].removeChild(calcul)
         div[2].removeChild(input)
-        pageScore(element, div)
-        // setAffichageJeu(element, div, resulat)
-        // setAffichageJeu(element, div)
+        pageScore(div)
+
     }else{
         if( getVie() === 1 ){
             console.log("fini")
             // score = 0
             // defaite++
             defaite(div, calcul, input)
-            rejouer(element,div, resulat)
+            rejouer(div, resulat)
         }
         else {
             console.log("mauvaise reponse")
@@ -36,7 +35,7 @@ export function regle(element, div, resulat, calcul, input){
             supprimerVie(div)
             div[2].removeChild(calcul)
             div[2].removeChild(input)
-            pageScore(element, div)
+            pageScore(div)
         }
     }
 }

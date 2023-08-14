@@ -1,7 +1,7 @@
 import { setRandom } from '../scoring/Random.js'
 import { regle } from '../regle.js'
 import { afficherVie } from '../scoring/vie.js'
-export function setAffichageJeu(element, resulat) {
+export function setAffichageJeu(resulat) {
 
     const div = document.querySelectorAll('#div div')
     console.log("div", div)
@@ -21,11 +21,11 @@ export function setAffichageJeu(element, resulat) {
     div[2].appendChild(input).focus()
     input.classList = "classInput"
 
-    input.addEventListener("keypress", function(event) {
+    input.addEventListener("keypress", (event) => {
         if (event.key === "Enter") {
             console.log(input.value)
 
-            regle(element, div, resulat, calcul, input)
+            regle(div, resulat, calcul, input)
         }}
         )
 }

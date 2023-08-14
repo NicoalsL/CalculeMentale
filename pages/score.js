@@ -1,6 +1,6 @@
 import { getScore } from "../scoring/score"
 import { setAffichageJeu } from "./jeu"
-export function pageScore(element, div){
+export function pageScore(div){
 
     const ligneScore = document.createElement('h1')
     div[1].appendChild(ligneScore)
@@ -16,9 +16,9 @@ export function pageScore(element, div){
     //  setAffichageJeu(element, div)
 
 }
-function tempsScore(element, div){
+function tempsScore(div){
     const scoreSec = setInterval(() => {   
-        setAffichageJeu(element, div)
+        setAffichageJeu(div)
         clearInterval(scoreSec)
     }, 1100);
 }

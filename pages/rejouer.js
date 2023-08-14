@@ -3,7 +3,7 @@ import { reinitialiserScore } from "../scoring/score";
 import { reinitialiserVies } from "../scoring/vie";
 import { getScore } from "../scoring/score";
 import { addDefaite } from "../scoring/defaite";
-export function rejouer(element,div, resulat){
+export function rejouer(div, resulat){
 
     const button = document.createElement('button');
     button.innerText = "Rejouer"
@@ -18,6 +18,6 @@ export function rejouer(element,div, resulat){
         div[2].removeChild(button)
         reinitialiserScore()
         reinitialiserVies()
-        setAffichageJeu(element, div, resulat)    
+        setAffichageJeu(div, resulat)    
     })
 }

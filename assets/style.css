@@ -95,14 +95,31 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
-
+  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
 body{
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+  border: 3px solid #02cc8f;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
-  font-family: sans-serif;
+  font-family: 'Bricolage Grotesque', sans-serif !important;  
 }
+
+/* #div {
+  border: 3px solid #02cc8f;
+
+}
+
+#div div {
+  border: 3px solid #4cc09d;
+  padding: 10px;
+
+} */
 
 .start{
   background-color: #ffffff;
@@ -138,6 +155,8 @@ body{
   font-family: sans-serif;
   border-radius: 10px;
   cursor:pointer;
+  font-family: 'Bricolage Grotesque', sans-serif !important;  
+
   /* border: #d1212d 3px solid; */
 }
 
@@ -172,10 +191,11 @@ body{
   color: rgb(70, 70, 70);
   font-family: sans-serif;
   border-radius: 10px;
+  border: 1px solid #b1b1b1;
 }
 .start div input:focus {
   box-shadow: none;
-  border: none;
+  border: 1px solid #b1b1b1;
   outline: none;
   transform: translateY(5px);
 }
