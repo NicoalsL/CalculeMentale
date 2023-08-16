@@ -12,7 +12,7 @@ export function addTours(){
 }
 
 export function bonusTours(){
-    if(getErreurs() ===0 && tours ===10){
+    if(getErreurs() === 0 && tours === 10){
         ajoutVie()
     }
 }

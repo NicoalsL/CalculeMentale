@@ -9,7 +9,7 @@ export function setAffichageJeu( resulat ) {
     const calcul = document.createElement('h1')
     calcul.classList = "classCalcul"
     div[2].appendChild(calcul)
-    const { typeOperation } = getArithmétique(resulat); // Utilisez destructuring pour extraire le résultat et le type d'opération
+    // const { typeOperation } = getArithmétique(resulat); // Utilisez destructuring pour extraire le résultat et le type d'opération
 
     // let nombreUn = setRandom(10)
     // let nombreDeux = setRandom(10)

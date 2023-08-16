@@ -5,17 +5,16 @@ export function getArtiRandom(){
     return nombre
 
 }
-export function getArithmétique( resulat){
+export function getArithmétique(resulat){
 
     const random = Math.floor(Math.random() * 3)
     let typeOperation = "";
 
     const calcul = document.querySelector('.classCalcul')
-    console.log(random)
     
     let nombreUn = 0;
     let nombreDeux = 0;
-    
+    console.log("random", random)
     switch (random) {
         case 0 :
             console.log('+');

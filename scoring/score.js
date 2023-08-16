@@ -14,5 +14,4 @@ export function reinitialiserScore() {
 
 export function ajoutScore(nbr){
     score = score + nbr;
-    console.log("sssssssss",score)
 }
