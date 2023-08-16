@@ -195,6 +195,9 @@ function temps(){
     }, 1000);
 }
 
+
+
+
 function gestionDuScore(){
     const nbr = Math.floor(Math.random() * 3)
     const signe = ""

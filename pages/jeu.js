@@ -2,6 +2,8 @@ import { setRandom } from '../scoring/Random.js'
 import { regle } from '../regle.js'
 import { afficherVie } from '../scoring/vie.js'
 import { getArithmétique } from '../scoring/arithmétique.js'
+import { calculeTrue } from '../scoring/valider.js'
+import { temps, affichageChronos, getChronos, daffichagerChronos } from '../scoring/chronos.js'
 export function setAffichageJeu( resulat ) {
 
     const div = document.querySelectorAll('#div div')
@@ -10,7 +12,8 @@ export function setAffichageJeu( resulat ) {
     calcul.classList = "classCalcul"
     div[2].appendChild(calcul)
     // const { typeOperation } = getArithmétique(resulat); // Utilisez destructuring pour extraire le résultat et le type d'opération
-
+    temps()
+    affichageChronos(div, getChronos())
     // let nombreUn = setRandom(10)
     // let nombreDeux = setRandom(10)
     // resulat = nombreUn + nombreDeux
@@ -28,7 +31,8 @@ export function setAffichageJeu( resulat ) {
     input.addEventListener("keypress", (event) => {
         if (event.key === "Enter") {
             console.log(input.value)
-
+            calculeTrue()
+            daffichagerChronos(div)
             regle(div, resulat.resulat, calcul, input, resulat.typeOperation)
         }}
         )

@@ -17,8 +17,18 @@ const div = document.querySelectorAll('#div div');
 setDebut(div, resulat)
 
 
+// const chronos = new Promise((resolve, reject) => {
+//   const interval = setInterval(()=> {
+//     console.log("ok")
+//     resolve(1)
+//   }, 1000)
+// })
 
+// console.log(chronos)
 
+// chronos.then((n) => {
+//   console.log(n)
+// })
 
 
 {/* <a href="https://vitejs.dev" target="_blank">
