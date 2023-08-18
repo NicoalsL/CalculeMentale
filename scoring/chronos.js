@@ -30,27 +30,41 @@ export function daffichagerChronos(div){
 
 
 
-export function temps(){
+export async function temps(){
 
-    const p = new Promise(() => {
-        const interval = setInterval(()=>{
+    return new Promise((resolve, reject) => {
+        const interval = setInterval( async () => {
             if( getCalcule() == true){
                 console.log("calcule Valdier");
                 clearInterval(interval);
                 calculeFalse()
+                refreshChronos()
             }
             const ligneChronos = document.querySelector('.chronos')
             goChronos()
-            ligneChronos.innerHTML = `${chronos}s`
+            try{
+
+                ligneChronos.innerHTML = `${chronos}s`
+            }catch(e){
+                console.log(e)
+            }
 
             if(getChronos() === 0){
                 console.log("FINI")
-
+                clearInterval(interval);
+                await daffichagerChronos(div); 
+                resolve(); 
             }
             
             
         },1000)
         
         
+    })
+}
+
+function start(){
+    return new Promise((resolve, reject) => {
+
     })
 }

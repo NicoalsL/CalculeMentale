@@ -5,15 +5,16 @@ import { defaite } from "./pages/defaite"
 import { rejouer } from "./pages/rejouer"
 import { addTours, bonusTours } from "./scoring/tour"
 import { addErreurs } from "./scoring/erreur"
-export function regle(div, resulat, calcul, input, typeOperation){
+import { supprimerCalcule } from "./scoring/calcule"
+
+export function regle(div, resulat, typeOperation){
     
-    console.log("affiche calcule", calcul)
     console.log("resultat regle", resulat)
     const classInput = document.querySelector(".classInput")
     const classVie = document.querySelector(".classVie")
 
     bonusTours()
-    
+
     if( resulat === parseInt(classInput.value)  ){
         addTours()
         switch (typeOperation) {
@@ -31,13 +32,11 @@ export function regle(div, resulat, calcul, input, typeOperation){
                 ajoutScore(500)
 
                 break
-            
         }
 
         console.log("bonne reponse")
         supprimerVie(div)
-        div[2].removeChild(calcul)
-        div[2].removeChild(input)
+        supprimerCalcule(div)
         pageScore(div)
 
     }else{
@@ -58,8 +57,8 @@ export function regle(div, resulat, calcul, input, typeOperation){
             classVie.innerHTML = `Vie : ${getVie()}`
             classInput.value = []
             supprimerVie(div)
-            div[2].removeChild(calcul)
-            div[2].removeChild(input)
+            supprimerCalcule(div)
+
             pageScore(div)
         }
     }
