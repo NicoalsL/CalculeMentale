@@ -12,7 +12,12 @@ body{
   font-family: 'Bricolage Grotesque', sans-serif !important;  
 }
 
-.nav {
+.content{
+
+  background-color: #970822;
+}
+
+nav {
   height: 8vh;
   width: 90vw;
   background-color: #a687c1; 
@@ -22,7 +27,7 @@ body{
   border-bottom: 2px solid #8da39c;
 }
 
-.nav ul{
+nav ul{
    background-color: #c36548; 
   display: flex;
   justify-content:space-around;
@@ -36,7 +41,7 @@ body{
   font-family: 'Bricolage Grotesque', sans-serif !important;  
 
 }
-.nav ul li {
+nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
