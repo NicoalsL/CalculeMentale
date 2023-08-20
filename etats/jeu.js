@@ -4,7 +4,7 @@ import { afficherVie } from '../scoring/vie.js'
 import { getArithmétique } from '../scoring/arithmétique.js'
 import { calculeTrue } from '../scoring/valider.js'
 import { afficherCalcule } from '../scoring/calcule.js'
-import { temps, affichageChronos, getChronos, daffichagerChronos } from '../scoring/chronos.js'
+import { temps, affichageChronos, getChronos, daffichagerChronos, barreTime } from '../scoring/chronos.js'
 export function setAffichageJeu( resulat ) {
 
     const div = document.querySelectorAll('#div div')
@@ -16,6 +16,7 @@ export function setAffichageJeu( resulat ) {
         daffichagerChronos(div)
     }).catch((err)=>{console.error(err)})
     affichageChronos(div, getChronos())
+    barreTime(div, getChronos())
     // let nombreUn = setRandom(10)
     // let nombreDeux = setRandom(10)
     // resulat = nombreUn + nombreDeux

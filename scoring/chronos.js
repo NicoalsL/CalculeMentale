@@ -1,12 +1,12 @@
 import { calculeFalse, getCalcule } from "./valider";
-let chronos = 11;
+let chronos = 10;
 
 export function getChronos(){
     return chronos
 }
 
 export function refreshChronos(){
-    chronos = 11;
+    chronos = 10;
 }
 
 export function goChronos(){
@@ -52,7 +52,7 @@ export async function temps(){
             if(getChronos() === 0){
                 console.log("FINI")
                 clearInterval(interval);
-                await daffichagerChronos(div); 
+                daffichagerChronos(div); 
                 resolve(); 
             }
             
@@ -67,4 +67,27 @@ function start(){
     return new Promise((resolve, reject) => {
 
     })
+}
+
+export function barreTime(div, chronos){
+    const timerContainer = document.createElement('div')
+    const timerBar = document.createElement('div')
+    timerContainer.classList ="timer-container"
+    timerBar.classList ="timer-bar"
+
+    div[3].appendChild(timerContainer)
+    timerContainer.appendChild(timerBar)
+
+    function updateTimer() {
+    if (chronos >= 0) {
+        const progress = ((10 - chronos) / 10) * 100;
+        console.log(progress)
+        timerBar.style.width = progress + "%";
+        chronos--;
+        console.log("aaaaa", chronos)
+        setTimeout(updateTimer, 1000);
+      }
+      
+    }
+    updateTimer();
 }

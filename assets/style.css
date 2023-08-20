@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
 
 body{
   margin: 0;
@@ -32,7 +32,6 @@ nav ul{
    background-color: #c36548; 
   display: flex;
   justify-content:space-around;
-  /* align-items: stretch; */
    align-items: center;
   flex-direction: row;
   padding: 0;
@@ -53,7 +52,6 @@ nav ul li {
   height: 50%;
   width: 30%;
   padding: 5px 15px;
-  /* flex: 1; */
   color: #02cc8f;
   font-size: 20px;
   font-weight: bold;
@@ -105,29 +103,8 @@ nav ul li {
   align-items: center;
 }
 
-.jouer{
-  background-color: #02cc8f;
-  box-shadow: 0 5px 0 #08ac7b;
-  border: none;
-  margin: 10px;
-  padding: 10px 25px;
-  color: white;
-  font-family: sans-serif;
-  border-radius: 10px;
-  cursor:pointer;
-  font-family: 'Bricolage Grotesque', sans-serif !important;  
-  width: 150px;
-  height: 50px;
-  font-size: 24px;
-}
-/* Réinitialisation des styles */
 
-.jouer:active {
-  box-shadow: none !important;
-  transform: translateY(5px) !important;
-}
 .custom-link:active {
-  /* Styles appliqués lorsqu'un lien est activé */
   box-shadow: none !important;
   transform: translateY(5px) !important;
 }
@@ -171,4 +148,45 @@ nav ul li {
 .start div input:active {
   box-shadow: none;
   transform: translateY(5px);
+} */
+
+
+.timer-container {
+  width: 300px;
+  height: 20px;
+  background-color: #ccc;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 0 #08ac7b;
+}
+
+.timer-bar {
+  width: 0; 
+  height: 100%;
+  background: linear-gradient(to right, #2ecc71, #1abc9c); /* Dégradé de vert émeraude */
+  position: absolute;
+  transition: width 1s linear;
+  border: 1px solid #2ecc71; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); 
+}
+.jouer{
+  background-color: #02cc8f;
+  box-shadow: 0 5px 0 #08ac7b;
+  border: none;
+  margin: 10px;
+  padding: 10px 25px;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 10px;
+  cursor:pointer;
+  font-family: 'Bricolage Grotesque', sans-serif !important;  
+  width: 150px;
+  height: 50px;
+  font-size: 24px;
+}
+
+.jouer:active {
+  box-shadow: none !important;
+  transform: translateY(5px) !important;
 }
