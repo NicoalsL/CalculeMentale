@@ -15,6 +15,7 @@ body{
 .content{
 
   background-color: #970822;
+  padding: 20px;
 }
 
 nav {
@@ -119,10 +120,16 @@ nav ul li {
   height: 50px;
   font-size: 24px;
 }
+/* Réinitialisation des styles */
 
 .jouer:active {
-  box-shadow: none;
-  transform: translateY(5px);
+  box-shadow: none !important;
+  transform: translateY(5px) !important;
+}
+.custom-link:active {
+  /* Styles appliqués lorsqu'un lien est activé */
+  box-shadow: none !important;
+  transform: translateY(5px) !important;
 }
 
 .rejouer {

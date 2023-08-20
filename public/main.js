@@ -15,13 +15,16 @@
 // `
 // const div = document.querySelectorAll('#div div'); 
 // setDebut(div, resulat)
+import './assets/style.css'
 
 import indexPage from './pages/index.js';
 import classementPage from './pages/classement.js';
+import jeuPage from './pages/jeu';
 
 const routes = {
   '/': indexPage,
   '/classement': classementPage,
+  '/jeu': jeuPage,
   // ... autres routes
 };
 
@@ -45,3 +48,4 @@ const initialPath = window.location.pathname;
 if (routes[initialPath]) {
   routes[initialPath]();
 }
+
