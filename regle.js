@@ -6,6 +6,7 @@ import { rejouer } from "./etats/rejouer"
 import { addTours, bonusTours } from "./scoring/tour"
 import { addErreurs } from "./scoring/erreur"
 import { supprimerCalcule } from "./scoring/calcule"
+import { getChronos } from "./scoring/chronos"
 
 export function regle(div, resulat, typeOperation){
     
@@ -15,7 +16,7 @@ export function regle(div, resulat, typeOperation){
 
     bonusTours()
 
-    if( resulat === parseInt(classInput.value)  ){
+    if( resulat === parseInt(classInput.value) &&  getChronos() > 0 ){
         addTours()
         switch (typeOperation) {
             case "+" :
@@ -40,6 +41,7 @@ export function regle(div, resulat, typeOperation){
         pageScore(div)
 
     }else{
+
         if( getVie() === 1 ){
             addTours()
             addErreurs()

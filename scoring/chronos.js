@@ -7,6 +7,9 @@ export function getChronos(){
 
 export function refreshChronos(){
     chronos = 10;
+    const timerBar = document.querySelector('.timer-bar')
+
+    timerBar.style.width = "0"; // Réinitialise la barre
 }
 
 export function goChronos(){
@@ -75,7 +78,7 @@ export function barreTime(div, chronos){
     timerContainer.classList ="timer-container"
     timerBar.classList ="timer-bar"
 
-    div[3].appendChild(timerContainer)
+    div[1].appendChild(timerContainer)
     timerContainer.appendChild(timerBar)
 
     function updateTimer() {
@@ -90,4 +93,11 @@ export function barreTime(div, chronos){
       
     }
     updateTimer();
+
+}
+
+export function daffichagerBarreTime(div){
+    const ligneChronos = document.querySelector('.timer-container')
+    div[1].removeChild(ligneChronos);
+
 }

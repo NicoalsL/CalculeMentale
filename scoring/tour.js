@@ -8,7 +8,7 @@ export function getTours(){
 
 export function addTours(){
     tours++
-    console.log("tours", tours)
+    // console.log("tours", tours)
 }
 
 export function bonusTours(){

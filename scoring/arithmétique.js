@@ -1,7 +1,6 @@
 import { setRandom } from "./Random";
 export function getArtiRandom(){
     const nombre = Math.floor(Math.random() * 3)
-    console.log("nnnnnnnnnnnnnnnn",nombre)
     return nombre
 
 }
@@ -14,7 +13,6 @@ export function getArithmétique(resulat){
     
     let nombreUn = 0;
     let nombreDeux = 0;
-    console.log("random", random)
     switch (random) {
         case 0 :
             console.log('+');
