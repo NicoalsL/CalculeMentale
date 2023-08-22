@@ -45,12 +45,12 @@ export async function temps(){
             }
             const ligneChronos = document.querySelector('.chronos')
             goChronos()
-            try{
+            // try{
 
-                ligneChronos.innerHTML = `${chronos}s`
-            }catch(e){
-                console.log(e)
-            }
+            //     ligneChronos.innerHTML = `${chronos}s`
+            // }catch(e){
+            //     console.log(e)
+            // }
 
             if(getChronos() === 0){
                 console.log("FINI")
@@ -84,10 +84,10 @@ export function barreTime(div, chronos){
     function updateTimer() {
     if (chronos >= 0) {
         const progress = ((10 - chronos) / 10) * 100;
-        console.log(progress)
+        console.log("progess", progress);
+        console.log("chronos", chronos);
         timerBar.style.width = progress + "%";
         chronos--;
-        console.log("aaaaa", chronos)
         setTimeout(updateTimer, 1000);
       }
       

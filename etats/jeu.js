@@ -8,10 +8,10 @@ export function setAffichageJeu( resulat ) {
 
     const div = document.querySelectorAll('#div div')
     afficherCalcule(div)
-    temps()
-    .then(()=> {
-        // daffichagerChronos(div)
-    }).catch((err)=>{console.error(err)})
+    // temps()
+    // .then(()=> {
+    //     // daffichagerChronos(div)
+    // }).catch((err)=>{console.error(err)})
 
     // affichageChronos(div, getChronos())
     barreTime(div, getChronos())

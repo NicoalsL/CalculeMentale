@@ -50,8 +50,7 @@ export function regle(div, resulat, typeOperation){
             // defaite++
             defaite(div, calcul, input)
             rejouer(div, resulat)
-        }
-        else {
+        } else {
             addTours()
             addErreurs()
             console.log("mauvaise reponse")
