@@ -90,7 +90,7 @@ export function barreTime(div, chronos){
         chronos--;
         setTimeout(updateTimer, 1000);
       }
-      
+      console.log("teste")
     }
     updateTimer();
 
