@@ -137,9 +137,11 @@ function suppCalcule(){
 }
 
 function affichageScore(){
+
     const jeux = document.querySelector(".contenaire")
     jeux.classList.remove("bonneReponse")
     const div = document.querySelectorAll(".contenaire div")
+    
     const ligneScore = document.createElement('h1')
     div[2].appendChild(ligneScore)
     ligneScore.classList = "classLigneScore"
@@ -194,9 +196,6 @@ function temps(){
         }
     }, 1000);
 }
-
-
-
 
 function gestionDuScore(){
     const nbr = Math.floor(Math.random() * 3)

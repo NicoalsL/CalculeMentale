@@ -80,19 +80,22 @@ export function barreTime(div, chronos){
 
     div[1].appendChild(timerContainer)
     timerContainer.appendChild(timerBar)
+    console.log("ooooooo", chronos)
 
-    function updateTimer() {
+    function updateTimer(chronos) {
+        console.log("debut", chronos)
+
     if (chronos >= 0) {
         const progress = ((10 - chronos) / 10) * 100;
         console.log("progess", progress);
         console.log("chronos", chronos);
         timerBar.style.width = progress + "%";
         chronos--;
-        setTimeout(updateTimer, 1000);
-      }
-      console.log("teste")
+        setTimeout(() => updateTimer(chronos), 1000);
+      }else {console.log("Fin complete")}
+      console.log("fin")
     }
-    updateTimer();
+    updateTimer(chronos);
 
 }
 

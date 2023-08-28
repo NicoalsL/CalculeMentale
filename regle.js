@@ -15,8 +15,13 @@ export function regle(div, resulat, typeOperation){
     const classVie = document.querySelector(".classVie")
 
     bonusTours()
+    // resultat plus chrono
 
-    if( resulat === parseInt(classInput.value) &&  getChronos() > 0 ){
+    // bonne reponse et chono >0
+    // mauvaise reponse et chono == 0 
+    // 
+
+    if( resulat === parseInt(classInput.value) && getChronos() > 0 ){
         addTours()
         switch (typeOperation) {
             case "+" :
@@ -41,6 +46,7 @@ export function regle(div, resulat, typeOperation){
         pageScore(div)
 
     }else{
+        console.log("Mauvaise reponse", "chrono", getChronos())
 
         if( getVie() === 1 ){
             addTours()
