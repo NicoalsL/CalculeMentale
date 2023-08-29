@@ -7,12 +7,14 @@ import { addTours, bonusTours } from "./scoring/tour"
 import { addErreurs } from "./scoring/erreur"
 import { supprimerCalcule } from "./scoring/calcule"
 import { getChronos } from "./scoring/chronos"
-
+import { getReponse, reponseFalse, reponseTrue } from "./scoring/reponse"
+import { barreTime } from "./scoring/chronos"
 export function regle(div, resulat, typeOperation){
     
     console.log("resultat regle", resulat)
     const classInput = document.querySelector(".classInput")
     const classVie = document.querySelector(".classVie")
+    console.log("Valeur actuelle de chronos :", getChronos());
 
     bonusTours()
     // resultat plus chrono
@@ -20,6 +22,12 @@ export function regle(div, resulat, typeOperation){
     // bonne reponse et chono >0
     // mauvaise reponse et chono == 0 
     // 
+    if(getReponse() ===  true){
+        
+        console.log("REPONSE : ", getReponse())
+        console.log("UPDATE", barreTime())
+        console.log("UPDATE", barreTime())
+    }
 
     if( resulat === parseInt(classInput.value) && getChronos() > 0 ){
         addTours()

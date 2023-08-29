@@ -3,6 +3,7 @@ import { afficherVie } from '../scoring/vie.js'
 import { getArithmétique } from '../scoring/arithmétique.js'
 import { calculeTrue } from '../scoring/valider.js'
 import { afficherCalcule } from '../scoring/calcule.js'
+import { getReponse, reponseFalse, reponseTrue } from '../scoring/reponse.js'
 import { temps, affichageChronos, getChronos, daffichagerChronos, barreTime, daffichagerBarreTime } from '../scoring/chronos.js'
 export function setAffichageJeu( resulat ) {
 
@@ -20,10 +21,13 @@ export function setAffichageJeu( resulat ) {
     console.log("resultat", resulat)
     afficherVie(div)
 
+    reponseFalse()
 
     const input = document.querySelector('.classInput')
     input.addEventListener("keypress", (event) => {
         if (event.key === "Enter") {
+            reponseTrue()
+            console.log("reponse : ", getReponse())
             console.log(input.value)
             calculeTrue()
             // daffichagerChronos(div)
@@ -32,3 +36,4 @@ export function setAffichageJeu( resulat ) {
         }}
         )
 }
+
