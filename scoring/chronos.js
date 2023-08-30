@@ -1,6 +1,7 @@
 import { calculeFalse, getCalcule } from "./valider";
 import { getReponse, reponseFalse } from "./reponse";
-let chronos = 10;
+
+export let chronos = 10;
 
 export function getChronos(){
     return chronos
@@ -29,8 +30,9 @@ export function barreTime(div, chronos){
         timerBar.style.width = progress + "%";
         chronos--;
         console.log("AAAAAA", getReponse())
-        if(getReponse() === true){
+        if(getReponse() == true){
             reponseFalse()
+            console.log("CHRONOO ", chronos)
             return chronos
         }
         setTimeout(() => updateTimer(chronos), 1000);
@@ -53,64 +55,6 @@ export function refreshChronos(){
 export function goChronos(){
     chronos--
 }
-
-export function affichageChronos(div, chronos){
-    const ligneChronos = document.createElement('h1')
-    ligneChronos.classList = "chronos"
-
-    div[0].appendChild(ligneChronos);
-    ligneChronos.innerHTML = `${chronos}s`
-
-}
-
-export function daffichagerChronos(div){
-    const ligneChronos = document.querySelector('.chronos')
-    div[0].removeChild(ligneChronos);
-
-}
-
-
-
-export async function temps(){
-
-    return new Promise((resolve, reject) => {
-        const interval = setInterval( async () => {
-            if( getCalcule() == true){
-                console.log("calcule Valdier");
-                clearInterval(interval);
-                calculeFalse()
-                refreshChronos()
-            }
-            const ligneChronos = document.querySelector('.chronos')
-            goChronos()
-            // try{
-
-            //     ligneChronos.innerHTML = `${chronos}s`
-            // }catch(e){
-            //     console.log(e)
-            // }
-
-            if(getChronos() === 0){
-                console.log("FINI")
-                clearInterval(interval);
-                daffichagerChronos(div); 
-                resolve(); 
-            }
-            
-            
-        },1000)
-        
-        
-    })
-}
-
-function start(){
-    return new Promise((resolve, reject) => {
-
-    })
-}
-
-
 
 export function daffichagerBarreTime(div){
     const ligneChronos = document.querySelector('.timer-container')

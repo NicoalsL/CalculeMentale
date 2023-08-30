@@ -22,7 +22,7 @@ export function regle(div, resulat, typeOperation){
     // bonne reponse et chono >0
     // mauvaise reponse et chono == 0 
     // 
-    if(getReponse() ===  true){
+    if(getReponse() ==  true){
         
         console.log("REPONSE : ", getReponse())
         console.log("UPDATE", barreTime())
