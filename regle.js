@@ -19,14 +19,13 @@ export function regle(div, resulat, typeOperation){
     bonusTours()
     // resultat plus chrono
 
-    // bonne reponse et chono >0
+    // bonne reponse et chono > 0
     // mauvaise reponse et chono == 0 
     // 
     if(getReponse() ==  true){
         
         console.log("REPONSE : ", getReponse())
-        console.log("UPDATE", barreTime())
-        console.log("UPDATE", barreTime())
+
     }
 
     if( resulat === parseInt(classInput.value) && getChronos() > 0 ){

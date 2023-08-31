@@ -4,7 +4,7 @@ import { getArithmétique } from '../scoring/arithmétique.js'
 import { calculeTrue } from '../scoring/valider.js'
 import { afficherCalcule } from '../scoring/calcule.js'
 import { getReponse, reponseFalse, reponseTrue } from '../scoring/reponse.js'
-import { chronos, getChronos, barreTime, daffichagerBarreTime, goChronos } from '../scoring/chronos.js'
+import { chronos, getChronos, barreTime, daffichagerBarreTime, goChronos,refreshChronos } from '../scoring/chronos.js'
 export function setAffichageJeu( resulat ) {
 
     const div = document.querySelectorAll('#div div')
@@ -15,7 +15,7 @@ export function setAffichageJeu( resulat ) {
     // }).catch((err)=>{console.error(err)})
 
     // affichageChronos(div, getChronos())
-
+    refreshChronos()
     barreTime(div, getChronos())
     getArithmétique(resulat)
     resulat = getArithmétique(resulat)
