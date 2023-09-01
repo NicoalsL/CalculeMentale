@@ -15,7 +15,12 @@ const jeuPage = () => {
       </div>
     `;
     const div = document.querySelectorAll('#div div'); 
-setDebut(div, resulat)
+    div[0].classList = "divindividuel"
+    div[1].classList = "divindividuel"
+    div[2].classList = "divindividuel"
+    div[3].classList = "divindividuel"
+
+    setDebut(div, resulat)
   };
   
   export default jeuPage;
