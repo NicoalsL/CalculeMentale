@@ -28,7 +28,6 @@ export function setAffichageJeu( resulat ) {
             console.log(input.value)
             calculeTrue()
             // daffichagerChronos(div)
-            daffichagerBarreTime(div)
             regle(div, resulat.resulat, resulat.typeOperation)
         }}
         )

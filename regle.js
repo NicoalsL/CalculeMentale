@@ -17,63 +17,67 @@ export function regle(div, resulat, typeOperation){
     console.log("Valeur actuelle de chronos :", getChronos());
 
     bonusTours()
-    // resultat plus chrono
 
-    // bonne reponse et chono > 0
-    // mauvaise reponse et chono == 0 
-    // 
     if(getReponse() ==  true){
         
         console.log("REPONSE : ", getReponse())
 
     }
 
-    if( resulat === parseInt(classInput.value) && getChronos() > 0 ){
-        addTours()
-        switch (typeOperation) {
-            case "+" :
-                console.log('+');
-                ajoutScore(100)
-                break
-            case "-" :
-                console.log('-');
-                ajoutScore(200)
+    if( getChronos() === 10 ){
+        console.log("FIIINIII")
+        
+    } else {
 
-                break
-            case "x" :
-                console.log('x');
-                ajoutScore(500)
-
-                break
-        }
-
-        console.log("bonne reponse")
-        supprimerVie(div)
-        supprimerCalcule(div)
-        pageScore(div)
-
-    }else{
-        console.log("Mauvaise reponse", "chrono", getChronos())
-
-        if( getVie() === 1 ){
+        
+        if( resulat === parseInt(classInput.value)){
             addTours()
-            addErreurs()
-            console.log("fini")
-            // score = 0
-            // defaite++
-            defaite(div, calcul, input)
-            rejouer(div, resulat)
-        } else {
-            addTours()
-            addErreurs()
-            console.log("mauvaise reponse")
-            perdreVie()
-            classVie.innerHTML = `Vie : ${getVie()}`
-            classInput.value = []
-            supprimerVie(div)
-            supprimerCalcule(div)
-
-            pageScore(div)
-        }
-    }
-}
+            switch (typeOperation) {
+                case "+" :
+                    console.log('+');
+                    ajoutScore(100)
+                    break
+                    case "-" :
+                        console.log('-');
+                        ajoutScore(200)
+                        
+                        break
+                        case "x" :
+                            console.log('x');
+                            ajoutScore(500)
+                            
+                            break
+                        }
+                        
+                        console.log("bonne reponse")
+                        supprimerVie(div)
+                        supprimerCalcule(div)
+                        daffichagerChronos(div)
+                        pageScore(div)
+                        
+                    }else{
+                        console.log("Mauvaise reponse", "chrono", getChronos())
+                        
+                        if( getVie() === 1 ){
+                            addTours()
+                            addErreurs()
+                            console.log("fini")
+                            // score = 0
+                            // defaite++
+                            defaite(div, calcul, input)
+                            rejouer(div, resulat)
+                        } else {
+                            addTours()
+                            addErreurs()
+                            console.log("mauvaise reponse")
+                            perdreVie()
+                            classVie.innerHTML = `Vie : ${getVie()}`
+                            classInput.value = []
+                            supprimerVie(div)
+                            supprimerCalcule(div)
+                            daffichagerChronos(div)
+                            pageScore(div)
+                        }
+                    }
+                }
+            }
