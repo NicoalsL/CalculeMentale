@@ -6,7 +6,7 @@ import { rejouer } from "./etats/rejouer"
 import { addTours, bonusTours } from "./scoring/tour"
 import { addErreurs } from "./scoring/erreur"
 import { supprimerCalcule } from "./scoring/calcule"
-import { getChronos } from "./scoring/chronos"
+import { getChronos, daffichagerBarreTime } from "./scoring/chronos"
 import { getReponse, reponseFalse, reponseTrue } from "./scoring/reponse"
 import { barreTime } from "./scoring/chronos"
 export function regle(div, resulat, typeOperation){
@@ -26,6 +26,12 @@ export function regle(div, resulat, typeOperation){
 
     if( getChronos() === 10 ){
         console.log("FIIINIII")
+        supprimerVie(div)
+        supprimerCalcule(div)
+        daffichagerBarreTime(div)
+        pageScore(div)
+        perdreVie()
+
         
     } else {
 
@@ -52,7 +58,7 @@ export function regle(div, resulat, typeOperation){
                         console.log("bonne reponse")
                         supprimerVie(div)
                         supprimerCalcule(div)
-                        daffichagerChronos(div)
+                        daffichagerBarreTime(div)
                         pageScore(div)
                         
                     }else{

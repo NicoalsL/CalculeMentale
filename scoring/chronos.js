@@ -36,16 +36,19 @@ export function barreTime(div){
     timerContainer.appendChild(timerBar)
   
     const intervalId = setInterval(() => {
-      console.log(getChronos());
+      console.log("chronos", getChronos());
       goChronos();
       const progress = ((10 - getChronos()) / 10) * 100;
       console.log(progress);
       
       timerBar.style.width = progress + "%";
+      console.log("chronos 2 ", getChronos());
       
       if (getChronos() === 0 || getReponse()== true) {
+          console.log("chronos 3 ", getChronos());
         refreshChronos()
-          clearInterval(intervalId); // Arrêter l'intervalle lorsque chronos atteint 0
+        clearInterval(intervalId); // Arrêter l'intervalle lorsque chronos atteint 0
+        return chronos
       }
     }, 1000);
   }

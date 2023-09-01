@@ -1,10 +1,12 @@
 import { regle } from '../regle.js'
-import { afficherVie } from '../scoring/vie.js'
+import { afficherVie, supprimerVie } from '../scoring/vie.js'
 import { getArithmétique } from '../scoring/arithmétique.js'
 import { calculeTrue } from '../scoring/valider.js'
-import { afficherCalcule } from '../scoring/calcule.js'
+import { afficherCalcule, supprimerCalcule } from '../scoring/calcule.js'
 import { getReponse, reponseFalse, reponseTrue } from '../scoring/reponse.js'
 import { chronos, getChronos, barreTime, daffichagerBarreTime, goChronos,refreshChronos } from '../scoring/chronos.js'
+import { pageScore } from './score.js'
+import { perdreVie } from '../scoring/vie.js'
 export function setAffichageJeu( resulat ) {
 
     const div = document.querySelectorAll('#div div')
@@ -18,6 +20,18 @@ export function setAffichageJeu( resulat ) {
     afficherVie(div)
 
     reponseFalse()
+    
+    console.log(getChronos())
+    if( getChronos() === 0 ){
+        console.log("FIIINIII")
+        // supprimerVie(div)
+        // supprimerCalcule(div)
+        // daffichagerBarreTime(div)
+        // pageScore(div)
+        // perdreVie() 
+    } 
+
+
 
     const input = document.querySelector('.classInput')
     input.addEventListener("keypress", (event) => {
