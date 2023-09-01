@@ -26,7 +26,6 @@ export function daffichagerBarreTime(div){
 
 export function barreTime(div){
 
-  
     const timerContainer = document.createElement("div")
     const timerBar = document.createElement("div")
     
@@ -44,13 +43,14 @@ export function barreTime(div){
       
       timerBar.style.width = progress + "%";
       
-      if (getChronos() === 0) {
+      if (getChronos() === 0 || getReponse()== true) {
+        refreshChronos()
           clearInterval(intervalId); // Arrêter l'intervalle lorsque chronos atteint 0
       }
     }, 1000);
-    
-    
-  }// export function barreTime(div, chronos){
+  }
+  
+  // export function barreTime(div, chronos){
 //     console.log(getReponse())
 //     const timerContainer = document.createElement('div')
 //     const timerBar = document.createElement('div')

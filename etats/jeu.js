@@ -9,14 +9,9 @@ export function setAffichageJeu( resulat ) {
 
     const div = document.querySelectorAll('#div div')
     afficherCalcule(div)
-    // temps()
-    // .then(()=> {
-    //     // daffichagerChronos(div)
-    // }).catch((err)=>{console.error(err)})
 
-    // affichageChronos(div, getChronos())
     refreshChronos()
-    barreTime(div, getChronos())
+    barreTime(div)
     getArithmétique(resulat)
     resulat = getArithmétique(resulat)
     console.log("resultat", resulat)
