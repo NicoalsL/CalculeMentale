@@ -1,6 +1,14 @@
 import { calculeFalse, getCalcule } from "./valider";
 import { getReponse, reponseFalse } from "./reponse";
-
+import { supprimerVie } from "./vie";
+import { supprimerCalcule } from "./calcule";
+import { perdreVie } from "./vie";
+import { pageScore } from "../etats/score";
+import { getVie } from "./vie";
+import { addTours } from "./tour";
+import { addErreurs } from "./erreur";
+import { defaite, defaiteChyronos } from "../etats/defaite";
+import { rejouer } from "../etats/rejouer";
 export let chronos = 10;
 
 export function getChronos(){
@@ -24,7 +32,7 @@ export function daffichagerBarreTime(div){
 }
 
 
-export function barreTime(div){
+export function barreTime(div, resulat){
 
     const timerContainer = document.createElement("div")
     const timerBar = document.createElement("div")
@@ -39,16 +47,34 @@ export function barreTime(div){
       console.log("chronos", getChronos());
       goChronos();
       const progress = ((10 - getChronos()) / 10) * 100;
-      console.log(progress);
       
       timerBar.style.width = progress + "%";
-      console.log("chronos 2 ", getChronos());
-      
+      if( getChronos() === 0 ){
+        console.log("FIIINIII")
+        console.log("supprimer vie chronos.js")
+
+        supprimerVie(div)
+        supprimerCalcule(div)
+        daffichagerBarreTime(div)
+        pageScore(div)
+        perdreVie() 
+    } 
+
+
       if (getChronos() === 0 || getReponse()== true) {
+        if( getVie() <= 1 ){
+
+            console.log("fini")
+            // score = 0
+            // defaite++
+            addTours()
+            addErreurs()
+            defaiteChyronos(div)
+            rejouer(div, resulat)
+        } 
           console.log("chronos 3 ", getChronos());
         refreshChronos()
         clearInterval(intervalId); // Arrêter l'intervalle lorsque chronos atteint 0
-        return chronos
       }
     }, 1000);
   }

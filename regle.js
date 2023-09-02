@@ -24,53 +24,44 @@ export function regle(div, resulat, typeOperation){
 
     }
 
-    if( getChronos() === 10 ){
-        console.log("FIIINIII")
-        supprimerVie(div)
-        supprimerCalcule(div)
-        daffichagerBarreTime(div)
-        pageScore(div)
-        perdreVie()
-
-        
-    } else {
-
-        
         if( resulat === parseInt(classInput.value)){
             addTours()
             switch (typeOperation) {
                 case "+" :
-                    console.log('+');
-                    ajoutScore(100)
-                    break
-                    case "-" :
-                        console.log('-');
-                        ajoutScore(200)
+                console.log('+');
+                ajoutScore(100)
+
+                break
+                case "-" :
+                console.log('-');
+                ajoutScore(200)
+                
+                break
+                case "x" :
+                console.log('x');
+                ajoutScore(500)
+                
+                break
+                }
                         
-                        break
-                        case "x" :
-                            console.log('x');
-                            ajoutScore(500)
-                            
-                            break
-                        }
-                        
-                        console.log("bonne reponse")
-                        supprimerVie(div)
-                        supprimerCalcule(div)
-                        daffichagerBarreTime(div)
-                        pageScore(div)
+                   console.log("bonne reponse")
+                   console.log("supprimer vie regle.js")
+
+                   supprimerVie(div)
+                   supprimerCalcule(div)
+                   daffichagerBarreTime(div)
+                   pageScore(div)
                         
                     }else{
                         console.log("Mauvaise reponse", "chrono", getChronos())
                         
-                        if( getVie() === 1 ){
+                        if( getVie() <= 1 ){
                             addTours()
                             addErreurs()
                             console.log("fini")
                             // score = 0
                             // defaite++
-                            defaite(div, calcul, input)
+                            defaite(div)
                             rejouer(div, resulat)
                         } else {
                             addTours()
@@ -79,11 +70,12 @@ export function regle(div, resulat, typeOperation){
                             perdreVie()
                             classVie.innerHTML = `Vie : ${getVie()}`
                             classInput.value = []
+                            console.log("supprimer vie regle.js")
+
                             supprimerVie(div)
                             supprimerCalcule(div)
-                            daffichagerChronos(div)
+                            daffichagerBarreTime(div)
                             pageScore(div)
                         }
                     }
-                }
             }

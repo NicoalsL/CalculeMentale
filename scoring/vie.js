@@ -25,5 +25,7 @@ export function afficherVie(div){
 
 export function supprimerVie(div){
     const afiVie = document.querySelector(".classVie")
+    console.log('div vie', div[1])
     div[1].removeChild(afiVie)
 }
+

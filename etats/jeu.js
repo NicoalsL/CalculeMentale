@@ -13,7 +13,7 @@ export function setAffichageJeu( resulat ) {
     afficherCalcule(div)
 
     refreshChronos()
-    barreTime(div)
+    barreTime(div, resulat)
     getArithmétique(resulat)
     resulat = getArithmétique(resulat)
     console.log("resultat", resulat)
@@ -21,9 +21,8 @@ export function setAffichageJeu( resulat ) {
 
     reponseFalse()
     
-    console.log(getChronos())
     if( getChronos() === 0 ){
-        console.log("FIIINIII")
+        console.log("FIIINIII   JEUUX")
         // supprimerVie(div)
         // supprimerCalcule(div)
         // daffichagerBarreTime(div)
