@@ -44,6 +44,7 @@ export function barreTime(div, resulat){
     timerContainer.appendChild(timerBar)
   
     const intervalId = setInterval(() => {
+        console.log("debut interval", intervalId);
       console.log("chronos", getChronos());
       goChronos();
       const progress = ((10 - getChronos()) / 10) * 100;
@@ -52,30 +53,35 @@ export function barreTime(div, resulat){
       if( getChronos() === 0 ){
         console.log("FIIINIII")
         console.log("supprimer vie chronos.js")
+        console.log("supprimer calcule chronos.js")
+        console.log("supprimer BarreTime chronos.js")
 
         supprimerVie(div)
         supprimerCalcule(div)
         daffichagerBarreTime(div)
-        pageScore(div)
         perdreVie() 
+        console.log("afficher page score regle.js")
+        pageScore(div)
     } 
 
 
       if (getChronos() === 0 || getReponse()== true) {
+
+          console.log("clear interval", intervalId);
+        refreshChronos()
+        clearInterval(intervalId); // Arrêter l'intervalle lorsque chronos atteint 0
         if( getVie() <= 1 ){
 
-            console.log("fini")
+            console.log("fini vie inferieur a 1")
             // score = 0
             // defaite++
             addTours()
             addErreurs()
             defaiteChyronos(div)
-            rejouer(div, resulat)
-        } 
-          console.log("chronos 3 ", getChronos());
-        refreshChronos()
-        clearInterval(intervalId); // Arrêter l'intervalle lorsque chronos atteint 0
-      }
+            defaite(div)
+            // rejouer(div, resulat)
+        }   
+    }
     }, 1000);
   }
   
