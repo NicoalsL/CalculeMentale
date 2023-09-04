@@ -23,9 +23,10 @@ export function afficherVie(div){
     afiVie.innerHTML = `Vie : ${getVie()}`
 }
 
-export function supprimerVie(div){
+export function supprimerVie(){
+    const div = document.querySelector(".divUn")
     const afiVie = document.querySelector(".classVie")
-    console.log('div vie', div[1])
-    div[1].removeChild(afiVie)
+    console.log('div vie', div)
+    div.removeChild(afiVie)
 }
 

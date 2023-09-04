@@ -20,6 +20,10 @@ const jeuPage = () => {
     div[2].classList = "divindividuel"
     div[3].classList = "divindividuel"
 
+    div[0].classList = "divZero"
+    div[1].classList = "divUn"
+    div[2].classList = "divDeux"
+    div[3].classList = "divTrois"
     setDebut(div, resulat)
   };
   

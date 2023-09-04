@@ -33,7 +33,17 @@ export function daffichagerBarreTime(div){
 
 
 export function barreTime(div, resulat){
+    // if( getVie() <= 0 ){
 
+    //     console.log("fini vie inferieur a 1")
+    //     // score = 0
+    //     // defaite++
+    //     addTours()
+    //     addErreurs()
+    //     // defaiteChyronos(div)
+    //     defaite(div)
+    //     // rejouer(div, resulat)
+    // }   
     const timerContainer = document.createElement("div")
     const timerBar = document.createElement("div")
     
@@ -50,6 +60,8 @@ export function barreTime(div, resulat){
       const progress = ((10 - getChronos()) / 10) * 100;
       
       timerBar.style.width = progress + "%";
+      console.log("vie",getVie())
+      console.log("chrono",getChronos())
       if( getChronos() === 0 ){
         console.log("FIIINIII")
         console.log("supprimer vie chronos.js")
@@ -62,6 +74,7 @@ export function barreTime(div, resulat){
         perdreVie() 
         console.log("afficher page score regle.js")
         pageScore(div)
+
     } 
 
 
@@ -70,17 +83,7 @@ export function barreTime(div, resulat){
           console.log("clear interval", intervalId);
         refreshChronos()
         clearInterval(intervalId); // Arrêter l'intervalle lorsque chronos atteint 0
-        if( getVie() <= 1 ){
 
-            console.log("fini vie inferieur a 1")
-            // score = 0
-            // defaite++
-            addTours()
-            addErreurs()
-            defaiteChyronos(div)
-            defaite(div)
-            // rejouer(div, resulat)
-        }   
     }
     }, 1000);
   }
