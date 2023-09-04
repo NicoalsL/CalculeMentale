@@ -13,6 +13,8 @@ export function setAffichageJeu( resulat ) {
     afficherCalcule(div)
 
     refreshChronos()
+    console.log("div jeu", div)
+
     barreTime(div, resulat)
     getArithmétique(resulat)
     resulat = getArithmétique(resulat)

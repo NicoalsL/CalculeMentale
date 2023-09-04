@@ -33,6 +33,11 @@ export function daffichagerBarreTime(div){
 
 
 export function barreTime(div, resulat){
+    console.log("div chrono", div)
+    console.log("div0 chrono", div[0])
+    console.log("div1 chrono", div[1])
+    console.log("div2 chrono", div[2])
+    console.log("div3 chrono", div[3])
     // if( getVie() <= 0 ){
 
     //     console.log("fini vie inferieur a 1")
@@ -44,6 +49,24 @@ export function barreTime(div, resulat){
     //     defaite(div)
     //     // rejouer(div, resulat)
     // }   
+    if( getVie() === 0){
+        console.log("div0 chrono", div[0])
+        console.log("div1 chrono", div[1])
+        console.log("div2 chrono", div[2])
+        console.log("div3 chrono", div[3])
+        const afiVie = document.querySelector(".classVie")
+
+        div[1].removeChild(afiVie)
+
+        const input = document.querySelector('.classInput')
+        div[2].removeChild(input)
+
+        console.log("div0 chrono", div[0])
+        console.log("div1 chrono", div[1])
+        console.log("div2 chrono", div[2])
+        console.log("div3 chrono", div[3])
+
+    }
     const timerContainer = document.createElement("div")
     const timerBar = document.createElement("div")
     
@@ -62,7 +85,11 @@ export function barreTime(div, resulat){
       timerBar.style.width = progress + "%";
       console.log("vie",getVie())
       console.log("chrono",getChronos())
-      if( getChronos() === 0 ){
+      if( getChronos() === 0 &&  getVie() !== 0){
+        console.log("div0 chrono", div[0])
+        console.log("div1 chrono", div[1])
+        console.log("div2 chrono", div[2])
+        console.log("div3 chrono", div[3])
         console.log("FIIINIII")
         console.log("supprimer vie chronos.js")
         console.log("supprimer calcule chronos.js")
