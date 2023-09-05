@@ -11,7 +11,7 @@ export function setDebut(div, resulat) {
 
         div[2].removeChild(boutonCommencer)
 
-        setAffichageJeu(resulat)
+        setAffichageJeu(div, resulat)
 
     })
     }

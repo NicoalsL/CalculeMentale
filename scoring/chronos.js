@@ -9,6 +9,7 @@ import { addTours } from "./tour";
 import { addErreurs } from "./erreur";
 import { defaite, defaiteChyronos } from "../etats/defaite";
 import { rejouer } from "../etats/rejouer";
+import { regle } from "../regle";
 export let chronos = 10;
 
 export function getChronos(){
@@ -50,16 +51,19 @@ export function barreTime(div, resulat){
     //     // rejouer(div, resulat)
     // }   
     if( getVie() === 0){
+        console.log("!!!!!!!!!!!!!!")
         console.log("div0 chrono", div[0])
         console.log("div1 chrono", div[1])
         console.log("div2 chrono", div[2])
         console.log("div3 chrono", div[3])
         const afiVie = document.querySelector(".classVie")
+        console.log("div3 class vie", afiVie)
+        
+        // div[1].removeChild(afiVie)
+        rejouer(div, resulat)
 
-        div[1].removeChild(afiVie)
-
-        const input = document.querySelector('.classInput')
-        div[2].removeChild(input)
+        // const input = document.querySelector('.classInput')
+        // div[2].removeChild(input)
 
         console.log("div0 chrono", div[0])
         console.log("div1 chrono", div[1])
@@ -67,6 +71,8 @@ export function barreTime(div, resulat){
         console.log("div3 chrono", div[3])
 
     }
+
+
     const timerContainer = document.createElement("div")
     const timerBar = document.createElement("div")
     
@@ -77,14 +83,18 @@ export function barreTime(div, resulat){
     timerContainer.appendChild(timerBar)
   
     const intervalId = setInterval(() => {
-        console.log("debut interval", intervalId);
+      console.log("debut interval", intervalId);
       console.log("chronos", getChronos());
       goChronos();
       const progress = ((10 - getChronos()) / 10) * 100;
       
       timerBar.style.width = progress + "%";
+
+
       console.log("vie",getVie())
       console.log("chrono",getChronos())
+
+
       if( getChronos() === 0 &&  getVie() !== 0){
         console.log("div0 chrono", div[0])
         console.log("div1 chrono", div[1])
@@ -100,7 +110,7 @@ export function barreTime(div, resulat){
         daffichagerBarreTime(div)
         perdreVie() 
         console.log("afficher page score regle.js")
-        pageScore(div)
+        pageScore(div, resulat)
 
     } 
 

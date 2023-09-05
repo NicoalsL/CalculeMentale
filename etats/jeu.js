@@ -7,9 +7,9 @@ import { getReponse, reponseFalse, reponseTrue } from '../scoring/reponse.js'
 import { chronos, getChronos, barreTime, daffichagerBarreTime, goChronos,refreshChronos } from '../scoring/chronos.js'
 import { pageScore } from './score.js'
 import { perdreVie } from '../scoring/vie.js'
-export function setAffichageJeu( resulat ) {
+export function setAffichageJeu( div, resulat ) {
 
-    const div = document.querySelectorAll('#div div')
+    // const div = document.querySelectorAll('#div div')
     afficherCalcule(div)
 
     refreshChronos()

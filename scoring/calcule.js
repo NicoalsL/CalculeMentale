@@ -1,5 +1,6 @@
 
 export function afficherCalcule(div){
+    console.log("creation calcule !!!!!!!!!", div)
     const calcul = document.createElement('h1')
     calcul.classList = "classCalcul"
     div[2].appendChild(calcul)

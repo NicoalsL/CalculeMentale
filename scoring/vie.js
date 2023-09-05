@@ -1,4 +1,4 @@
-let vie = 3;
+let vie = 1;
 
 export function getVie() {
     return vie;
