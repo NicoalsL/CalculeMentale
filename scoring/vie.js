@@ -1,4 +1,4 @@
-let vie = 1;
+let vie = 3;
 
 export function getVie() {
     return vie;
@@ -23,10 +23,8 @@ export function afficherVie(div){
     afiVie.innerHTML = `Vie : ${getVie()}`
 }
 
-export function supprimerVie(){
-    const div = document.querySelector(".divUn")
+export function supprimerVie(div){
     const afiVie = document.querySelector(".classVie")
-    console.log('div vie', div)
-    div.removeChild(afiVie)
+    div[1].removeChild(afiVie)
 }
 

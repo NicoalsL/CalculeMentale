@@ -7,13 +7,11 @@ import { addTours, bonusTours } from "./scoring/tour"
 import { addErreurs } from "./scoring/erreur"
 import { supprimerCalcule } from "./scoring/calcule"
 import { getChronos, daffichagerBarreTime } from "./scoring/chronos"
-import { getReponse, reponseFalse, reponseTrue } from "./scoring/reponse"
-import { barreTime } from "./scoring/chronos"
+import { getReponse } from "./scoring/reponse"
 
 export function regle(div, resulat, typeOperation){
     
-    console.log("regle.js debut", resulat)
-    console.log("Valeur actuelle de chronos :", getChronos());
+
     const classInput = document.querySelector(".classInput")
     const classVie = document.querySelector(".classVie")
 
@@ -40,19 +38,14 @@ export function regle(div, resulat, typeOperation){
             break
             }
 
-       console.log("bonne reponse regle.js")
-       console.log("supprimer vie regle.js")
-       console.log("calcule vie regle.js")
-       console.log("barreTime vie regle.js")
        supprimerVie(div)
        supprimerCalcule(div)
        daffichagerBarreTime(div)
-       console.log("lance page score regle.js")
        pageScore(div)
 
         }else{
             console.log("Mauvaise reponse", "chrono", getChronos())
-            if( getVie() <= 1 ){
+            if( getVie() === 0 ){
                 addTours()
                 addErreurs()
                 console.log("fini")
@@ -63,11 +56,9 @@ export function regle(div, resulat, typeOperation){
             } else {
                 addTours()
                 addErreurs()
-                console.log("mauvaise reponse")
                 perdreVie()
                 classVie.innerHTML = `Vie : ${getVie()}`
                 classInput.value = []
-                console.log("supprimer vie regle.js")
                 supprimerVie(div)
                 supprimerCalcule(div)
                 daffichagerBarreTime(div)
