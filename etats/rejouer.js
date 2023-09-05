@@ -28,16 +28,33 @@ export function rejouer(div, resulat){
             
             // Si l'élément ul n'existe pas, créez-le et ajoutez-le.
             if (!affichageul) {
-              const affichageul = document.createElement('ul');
-              div[3].appendChild(affichageul);
-          
-              getTableauCalcule().map(ligne => {
-                const affichage = document.createElement('li');
-                affichageul.appendChild(affichage);
-          
-                affichage.innerText = `${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} ${ligne.resultat} ${ligne.resultatJoueur} ${ligne.reussi}`;
-              });
-            }
+                const affichageul = document.createElement('ul');
+                div[3].appendChild(affichageul);
+              
+                getTableauCalcule().map(ligne => {
+                  const affichage = document.createElement('li');
+                  affichageul.appendChild(affichage);
+              
+                  if (ligne.reussi === true) {
+                    affichage.classList.add("correcte"); // Ajoutez une classe CSS pour "correcte"
+                  } else {
+                    affichage.classList.add("false"); // Ajoutez une classe CSS pour "false"
+                  }
+              
+                  const affTours = document.createElement('div');
+                  affTours.classList.add("affTours"); // Ajoutez une classe CSS pour "correcte"
+
+                  affichage.appendChild(affTours); // Ajoutez affTours en tant qu'enfant de affichage
+                  const texTours = document.createElement('p');
+                  affTours.appendChild(texTours); // Ajoutez affTours en tant qu'enfant de affichage
+                  texTours.innerText = `${ligne.tours}`;
+
+                  const affDetails = document.createElement('div');
+                  affDetails.innerText = `${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = ${ligne.resultat},${ligne.resultatJoueur}`;
+                  affichage.appendChild(affDetails); // Ajoutez affDetails en tant qu'enfant de affichage
+                });
+              }
+              
           });
           
 

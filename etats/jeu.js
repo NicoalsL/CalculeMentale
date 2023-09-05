@@ -28,8 +28,8 @@ export function setAffichageJeu( div, resulat ) {
                 reponseTrue()
                 calculeTrue()
                 // daffichagerChronos(div)
-                addTableauCalcule(resulat.nombreUn, resulat.nombreDeux, resulat.typeOperation, resulat.resulat, parseInt(input.value))
-                regle(div, resulat.resulat, resulat.typeOperation)
+                addTableauCalcule(getTours(), resulat.nombreUn, resulat.nombreDeux, resulat.typeOperation, resulat.resulat, parseInt(input.value))
+                regle( div, resulat.resulat, resulat.typeOperation)
             }}
             )
         }
