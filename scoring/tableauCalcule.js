@@ -20,3 +20,7 @@ export function addTableauCalcule(nombre1, nombre2, operateur, resultat, resulta
     tableauCalcule.push(calculEtResultat)
     console.log(getTableauCalcule())
 }
+
+export function reiniTableauCalcule(){
+    tableauCalcule = []
+}
