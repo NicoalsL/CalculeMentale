@@ -6,12 +6,13 @@ import { afficherCalcule } from '../scoring/calcule.js'
 import { reponseFalse, reponseTrue } from '../scoring/reponse.js'
 import { barreTime,refreshChronos } from '../scoring/chronos.js'
 import { getTours } from '../scoring/tour.js'
+import { addTableauCalcule } from '../scoring/tableauCalcule.js'
 
 export function setAffichageJeu( div, resulat ) {
+
     console.log(getTours())
     afficherCalcule(div)
     refreshChronos()
-
     getArithmétique(resulat)
     resulat = getArithmétique(resulat)
     afficherVie(div)
@@ -27,6 +28,7 @@ export function setAffichageJeu( div, resulat ) {
                 reponseTrue()
                 calculeTrue()
                 // daffichagerChronos(div)
+                addTableauCalcule(resulat.nombreUn, resulat.nombreDeux, resulat.typeOperation, resulat.resulat, parseInt(input.value))
                 regle(div, resulat.resulat, resulat.typeOperation)
             }}
             )

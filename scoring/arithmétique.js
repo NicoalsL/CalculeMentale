@@ -23,7 +23,7 @@ export function getArithmétique(resulat){
             
             calcul.innerHTML = `${nombreUn} + ${nombreDeux} = `
             resulat = nombreUn + nombreDeux
-            return { resulat, typeOperation }
+            return { nombreUn, nombreDeux, resulat, typeOperation }
     
         case 1 :
             console.log('-');
@@ -34,7 +34,7 @@ export function getArithmétique(resulat){
             resulat = nombreUn - nombreDeux
             
             calcul.innerHTML = `${nombreUn} - ${nombreDeux} = `
-            return { resulat, typeOperation }
+            return { nombreUn, nombreDeux, resulat, typeOperation }
 
         case 2:
             console.log('x');
@@ -45,7 +45,7 @@ export function getArithmétique(resulat){
             resulat = nombreUn * nombreDeux
             
             calcul.innerHTML = `${nombreUn} x ${nombreDeux} = `
-            return { resulat, typeOperation }
+            return { nombreUn, nombreDeux, resulat, typeOperation }
 
            default:
                 console.log(`Sorry, we are out of ${random}.`);
