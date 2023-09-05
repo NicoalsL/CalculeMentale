@@ -15,12 +15,12 @@ export function setAffichageJeu( div, resulat ) {
     refreshChronos()
     console.log("div jeu", div)
 
-    barreTime(div, resulat)
     getArithmétique(resulat)
     resulat = getArithmétique(resulat)
     console.log("resultat", resulat)
     afficherVie(div)
-
+    
+    barreTime(div, resulat)
     reponseFalse()
     
     if( getChronos() === 0 ){
@@ -35,16 +35,19 @@ export function setAffichageJeu( div, resulat ) {
 
 
     const input = document.querySelector('.classInput')
-    input.addEventListener("keypress", (event) => {
-        if (event.key === "Enter") {
-            reponseTrue()
-            console.log("reponse : ", getReponse())
-            console.log("CHRONO : ", chronos)
-            console.log(input.value)
-            calculeTrue()
-            // daffichagerChronos(div)
-            regle(div, resulat.resulat, resulat.typeOperation)
-        }}
-        )
+    if( input !== null){
+
+        input.addEventListener("keypress", (event) => {
+            if (event.key === "Enter") {
+                reponseTrue()
+                console.log("reponse : ", getReponse())
+                console.log("CHRONO : ", chronos)
+                console.log(input.value)
+                calculeTrue()
+                // daffichagerChronos(div)
+                regle(div, resulat.resulat, resulat.typeOperation)
+            }}
+            )
+        }
 }
 

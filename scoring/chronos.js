@@ -50,39 +50,43 @@ export function barreTime(div, resulat){
     //     defaite(div)
     //     // rejouer(div, resulat)
     // }   
-    if( getVie() === 0){
-        console.log("!!!!!!!!!!!!!!")
-        console.log("div0 chrono", div[0])
-        console.log("div1 chrono", div[1])
-        console.log("div2 chrono", div[2])
-        console.log("div3 chrono", div[3])
-        const afiVie = document.querySelector(".classVie")
-        console.log("div3 class vie", afiVie)
+ 
+
+        const timerContainer = document.createElement("div")
         
-        // div[1].removeChild(afiVie)
-        rejouer(div, resulat)
-
-        // const input = document.querySelector('.classInput')
-        // div[2].removeChild(input)
-
-        console.log("div0 chrono", div[0])
-        console.log("div1 chrono", div[1])
-        console.log("div2 chrono", div[2])
-        console.log("div3 chrono", div[3])
-
-    }
-
-
-    const timerContainer = document.createElement("div")
-    const timerBar = document.createElement("div")
+        const timerBar = document.createElement("div")
+        
+        timerContainer.classList ="timer-container"
+        timerBar.classList ="timer-bar"
+        
+        div[0].appendChild(timerContainer)
+        timerContainer.appendChild(timerBar)
+        if( getVie() === 0){
+            console.log("!!!!!!!!!!!!!!")
+            console.log("div0 chrono", div[0])
+            console.log("div1 chrono", div[1])
+            console.log("div2 chrono", div[2])
+            console.log("div3 chrono", div[3])
+            const afiVie = document.querySelector(".classVie")
+            console.log("div3 class vie", afiVie)
+            console.log("div3 class vie", div[1].firstChild)
+            supprimerVie(div)
+            supprimerCalcule(div)
+            daffichagerBarreTime(div)
+            
+            // div[1].removeChild(afiVie)
+            rejouer(div, resulat)
+            // const input = document.querySelector('.classInput')
+            // div[2].removeChild(input)
     
-    timerContainer.classList ="timer-container"
-    timerBar.classList ="timer-bar"
+            console.log("div0 chrono", div[0])
+            console.log("div1 chrono", div[1])
+            console.log("div2 chrono", div[2])
+            console.log("div3 chrono", div[3])
     
-    div[0].appendChild(timerContainer)
-    timerContainer.appendChild(timerBar)
-  
+        }
     const intervalId = setInterval(() => {
+
       console.log("debut interval", intervalId);
       console.log("chronos", getChronos());
       goChronos();
