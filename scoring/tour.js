@@ -1,6 +1,6 @@
 import { getErreurs } from "./erreur"
 import { ajoutVie } from "./vie"
-let tours = 0
+let tours = 1
 
 export function getTours(){
     return tours
