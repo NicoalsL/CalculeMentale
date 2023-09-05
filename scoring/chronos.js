@@ -10,6 +10,7 @@ import { addErreurs } from "./erreur";
 import { defaite, defaiteChyronos } from "../etats/defaite";
 import { rejouer } from "../etats/rejouer";
 import { regle } from "../regle";
+import { jeuPasFini, getJeuFini, jeuFin } from "./jeuFini";
 export let chronos = 10;
 
 export function getChronos(){
@@ -86,6 +87,10 @@ export function barreTime(div, resulat){
     
         }
     const intervalId = setInterval(() => {
+        if (getJeuFini() === true){
+            clearInterval(intervalId); // Arrêter l'intervalle lorsque chronos atteint 0
+
+        }
 
       console.log("debut interval", intervalId);
       console.log("chronos", getChronos());
