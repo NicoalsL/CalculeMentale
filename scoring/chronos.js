@@ -1,4 +1,3 @@
-import { calculeFalse, getCalcule } from "./valider";
 import { getReponse, reponseFalse } from "./reponse";
 import { supprimerVie } from "./vie";
 import { supprimerCalcule } from "./calcule";
@@ -6,10 +5,7 @@ import { perdreVie } from "./vie";
 import { pageScore } from "../etats/score";
 import { getVie } from "./vie";
 import { addTours } from "./tour";
-import { addErreurs } from "./erreur";
-import { defaite, defaiteChyronos } from "../etats/defaite";
 import { rejouer } from "../etats/rejouer";
-import { regle } from "../regle";
 import { jeuPasFini, getJeuFini, jeuFin } from "./jeuFini";
 export let chronos = 10;
 
@@ -29,7 +25,7 @@ export function goChronos(){
 
 export function daffichagerBarreTime(div){
     const ligneChronos = document.querySelector('.timer-container')
-    div[0].removeChild(ligneChronos);
+    div[1].removeChild(ligneChronos);
 
 }
 
@@ -40,7 +36,7 @@ export function barreTime(div, resulat){
         const timerBar = document.createElement("div")
         timerContainer.classList ="timer-container"
         timerBar.classList ="timer-bar"
-        div[0].appendChild(timerContainer)
+        div[1].appendChild(timerContainer)
         timerContainer.appendChild(timerBar)
         if( getVie() === 0){
             supprimerVie(div)
@@ -61,6 +57,7 @@ export function barreTime(div, resulat){
         supprimerCalcule(div)
         daffichagerBarreTime(div)
         perdreVie() 
+        addTours()
         pageScore(div, resulat)
     } 
 

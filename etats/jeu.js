@@ -1,13 +1,14 @@
 import { regle } from '../regle.js'
-import { afficherVie, supprimerVie } from '../scoring/vie.js'
+import { afficherVie } from '../scoring/vie.js'
 import { getArithmétique } from '../scoring/arithmétique.js'
 import { calculeTrue } from '../scoring/valider.js'
-import { afficherCalcule, supprimerCalcule } from '../scoring/calcule.js'
-import { getReponse, reponseFalse, reponseTrue } from '../scoring/reponse.js'
-import { chronos, getChronos, barreTime, daffichagerBarreTime, goChronos,refreshChronos } from '../scoring/chronos.js'
+import { afficherCalcule } from '../scoring/calcule.js'
+import { reponseFalse, reponseTrue } from '../scoring/reponse.js'
+import { barreTime,refreshChronos } from '../scoring/chronos.js'
+import { getTours } from '../scoring/tour.js'
 
 export function setAffichageJeu( div, resulat ) {
-
+    console.log(getTours())
     afficherCalcule(div)
     refreshChronos()
 
@@ -24,9 +25,6 @@ export function setAffichageJeu( div, resulat ) {
         input.addEventListener("keypress", (event) => {
             if (event.key === "Enter") {
                 reponseTrue()
-                console.log("reponse : ", getReponse())
-                console.log("CHRONO : ", chronos)
-                console.log(input.value)
                 calculeTrue()
                 // daffichagerChronos(div)
                 regle(div, resulat.resulat, resulat.typeOperation)

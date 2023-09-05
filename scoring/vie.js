@@ -18,13 +18,13 @@ export function ajoutVie(){
 
 export function afficherVie(div){
     const afiVie = document.createElement('h1')
-    div[1].appendChild(afiVie)
+    div[0].appendChild(afiVie)
     afiVie.classList = "classVie"
     afiVie.innerHTML = `Vie : ${getVie()}`
 }
 
 export function supprimerVie(div){
     const afiVie = document.querySelector(".classVie")
-    div[1].removeChild(afiVie)
+    div[0].removeChild(afiVie)
 }
 
