@@ -11,9 +11,17 @@ const indexPage = () => {
         </li>
       </ul>
     </nav>
-    <h1>jeux</h1>
-    
+
+    <div class="hero">
+    <div class="heroTexte">
+    <h1>CalculeSky</h1>
+    <p>c'est un jeu nnono decovurez ! </p>
+    </div>
     <button class="neubrutalism"><a class="buttonA" href="/jeu" onclick="navigateTo('/jeu'); return false;">Jouez Maintenant</a></button>
+    </div>
+
+
+    
     `;
 };
 

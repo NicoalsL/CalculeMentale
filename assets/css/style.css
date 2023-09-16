@@ -1,5 +1,6 @@
 @import url("jeu.css");
 @import url("nav.css");
+@import url("accueil.css");
 
 /* .jouer{
   background-color: #02cc8f;
@@ -24,7 +25,8 @@
 
 
 .neubrutalism {
-  background-color: #02cc8f;
+  /* background-color: #02cc8f; */
+  background-color: #F2D83D;
   box-shadow: 5px 5px 0 #000000;
   border: none;
   margin: 10px;
@@ -66,8 +68,9 @@ body{
 
 
 .content{
-  background-color: #c72424;
-  /* display: flex;
+  background-color: #6455F2;
+  /* 
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column; */

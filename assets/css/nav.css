@@ -8,16 +8,19 @@ nav{
     justify-content: center;
     align-items: center;
     border-bottom: 5px solid black;
-  }
+    background-color: white;
+}
+
 nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid black;
-    height: 70px;
-    width: 450px;
-  }
+    /* border-bottom: 5px solid black;    
+    background-color: rgb(155, 80, 80); */
+    height: 100%;
+    width: 50%;
+}
   
 nav ul li {
     list-style: none;
@@ -25,17 +28,20 @@ nav ul li {
     justify-content: center;
     align-items: center;
     margin: 15px;
-  }
+    height: 100%;
+}
+
   
 nav ul li a {
     text-decoration: none;
     padding: 15px;
-    border-bottom: 5px solid black;
-    color: #02cc8f;
+    /* border-bottom: 5px solid black; */
+    /* color: #02cc8f; */
+    color: black;
     font-weight: bold;
     font-size: 24px;
   
-  }
+}
 
   
 .classInput:focus {
