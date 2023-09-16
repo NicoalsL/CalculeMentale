@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+/* 
 
 body{
   margin: 0;
@@ -403,4 +403,9 @@ nav ul li a {
 
 .false{
   background-color: #cc022e;
+}
+
+.coeur{
+  border: 1px solid black;
+
 }
