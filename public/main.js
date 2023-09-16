@@ -1,4 +1,4 @@
-import './assets/style.css'
+import './assets/css/style.css'
 
 import indexPage from './pages/index.js';
 import classementPage from './pages/classement.js';
