@@ -23,6 +23,7 @@ export function regle(div, resulat, typeOperation){
 
         if( resulat === parseInt(classInput.value)){
             addTours()
+            
             switch (typeOperation) {
             case "+" :
             console.log('+');

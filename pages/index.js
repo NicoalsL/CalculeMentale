@@ -2,22 +2,29 @@ const indexPage = () => {
   const content = document.getElementById('content');
   content.innerHTML = `
     <nav>
-      <ul>
-        <li>
+      <ul class="contenaireTitre">
+        <li class="">
+          <p>Astronomaths</p>
+        </li>
+      </ul>
+      <ul class="navUl">
+        <li class="navLi">
           <a href="/" onclick="navigateTo('/'); return false;">Accueil</a>
         </li>
-        <li>
+        <li class="navLi">
           <a href="/classement" onclick="navigateTo('/classement'); return false;">Classement</a>
         </li>
       </ul>
     </nav>
 
     <div class="hero">
-    <div class="heroTexte">
-    <h1>CalculeSky</h1>
-    <p>c'est un jeu nnono decovurez ! </p>
+    <div class="herocontenaire">
+      <div class="heroTexte">
+        <h1>Astronomaths</h1>
+        <p>Préparez-vous à un défi mathématique interstellaire avec Astronomaths, le jeu de calcul mental ultime.</p>
+      </div>
+      <button class="neubrutalism"><a class="buttonA" href="/jeu" onclick="navigateTo('/jeu'); return false;">Jouez Maintenant</a></button>
     </div>
-    <button class="neubrutalism"><a class="buttonA" href="/jeu" onclick="navigateTo('/jeu'); return false;">Jouez Maintenant</a></button>
     </div>
 
 

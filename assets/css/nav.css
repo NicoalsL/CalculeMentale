@@ -1,34 +1,43 @@
 nav{
     max-width: 100vw;
     width: 100vw;
-    height: 100px;
+    height: 10vh;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end; 
     border-bottom: 5px solid black;
-    background-color: white;
+    background-color: rgb(208, 109, 109);
 }
 
-nav ul {
+.navUl {
     margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
     /* border-bottom: 5px solid black;    
-    background-color: rgb(155, 80, 80); */
+    background-color: rgb(155, 80, 80);  */
     height: 100%;
-    width: 50%;
+    width: 30vw;
+    background-color: rgb(114, 208, 109);
+
 }
   
-nav ul li {
+.navLi {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px;
-    height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    border: 5px solid black;
+    border-radius: 15px 15px 0px 0px;
+    background-color: rgb(109, 140, 208);
+    margin: -5px -3px;
+
 }
 
   
@@ -49,3 +58,72 @@ nav ul li a {
     box-shadow: none !important;
     transform: translate(5px, 5px) !important;
   }
+
+  .contenaireTitre{
+    background-color: #F2D83D;
+    height: 100%;
+    width: 20vw;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: end;
+}
+.contenaireTitre li {
+    display: flex;
+    align-items: end;
+    justify-content:center;
+    width: 100%;
+    background-color: #6455F2;
+}
+
+.contenaireTitre li p {
+    font-size: 3rem;
+    display: flex;
+    align-items: end;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .navUl {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navLi {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+/* Title container styles */
+.contenaireTitre {
+    background-color: #F2D83D;
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    align-items: flex-end;
+}
+
+.contenaireTitre li {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    background-color: #6455F2;
+}
+
+.contenaireTitre li p {
+    font-size: 3rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+}
