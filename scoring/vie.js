@@ -34,7 +34,7 @@ function genererCoeurs(nombreDeVies) {
   // Modifiez la fonction afficherVie pour afficher les cœurs
   export function afficherVie(div) {
     const afiVie = document.createElement('div'); // Utilisez une balise div pour contenir les cœurs
-    div[0].appendChild(afiVie);
+    div[1].appendChild(afiVie);
     afiVie.classList = "classVie";
     const nombreDeVies = getVie();
     const coeursHTML = genererCoeurs(nombreDeVies);
@@ -44,6 +44,6 @@ function genererCoeurs(nombreDeVies) {
 
 export function supprimerVie(div){
     const afiVie = document.querySelector(".classVie")
-    div[0].removeChild(afiVie)
+    div[1].removeChild(afiVie)
 }
 

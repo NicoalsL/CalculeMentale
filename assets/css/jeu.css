@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+.btn-start {
+    /* background-color: #02cc8f; */
+    background-color: #F2D83D;
+    box-shadow: 5px 5px 0 #000000;
+    border: none;
+    margin: 10px;
+    padding: 10px 45px;
+    color: white;
+    font-family: sans-serif;
+    border: #000000 3px solid;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-family: 'Bricolage Grotesque', sans-serif !important;  
+    /* width: 150px;  */
+    height: 65px;
+    font-size: 36px;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .btn-start:active {
+    box-shadow: none !important;
+    transform: translate(5px, 5px) !important;
+  }
+
 .timer-container {
     width: 600px;
     height: 40px;
@@ -24,20 +50,32 @@
 
     .classInput{
         box-shadow: 5px 5px 0 #000000;
+        background-color: transparent;
         border: none;
         margin: 10px;
-        padding: 10px 25px;
+        padding: 0px 0px;
         color: rgb(0, 0, 0);
         font-family: sans-serif;
-        border: #000000 3px solid;
-        border-radius: 5px; 
+        border-bottom: #000000 3px solid;
+        border-radius: 5px;  
         cursor: pointer;
         font-family: 'Bricolage Grotesque', sans-serif !important;  
-        width: 50px;
-        height: 20px;
+        width: 70px;
+        height: 50px;
         font-size: 24px;
         display: flex;
+        outline-width: 0;
+        box-shadow: none !important;
+        transform: translate(5px, 5px) !important;
+        font-size: 45px;
     }
+
+    .classInput:focus {
+        outline-width: 0;
+        box-shadow: none !important;
+        transform: translate(5px, 5px) !important;
+    }
+
 
       .divindividuel{
         /* background-color: #ffffff; */
@@ -103,4 +141,55 @@
   .false{
     background-color: #cc022e;
   }
+
+  .div1{
+    background-color: #02cc8f;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  .div2{
+    background-color: #02cc8f;
+    height: 10vh;
+  }
+  .div3{
+    background-color: #02cc8f;
+    height: 25vh;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 45px;
+  }
+  .div4{
+    background-color: #02cc8f;
+    height: 25vh;
+  }
+
   
+@media (max-width: 850px) {
+    
+.btn-start {
+    /* background-color: #02cc8f; */
+    background-color: #F2D83D;
+    box-shadow: 5px 5px 0 #000000;
+    border: none;
+    margin: 10px;
+    padding: 10px 45px;
+    color: white;
+    font-family: sans-serif;
+    border: #000000 3px solid;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-family: 'Bricolage Grotesque', sans-serif !important;  
+    /* width: 150px;  */
+    height: 75px;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .btn-start:active {
+    box-shadow: none !important;
+    transform: translate(5px, 5px) !important;
+  }
+
+
+}

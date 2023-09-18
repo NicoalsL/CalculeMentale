@@ -8,17 +8,13 @@ const jeuPage = () => {
     const content = document.getElementById('content');
     content.innerHTML = `
       <div id="div" class="start">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="div1 divindividuel" ></div>
+      <div class="div2 divindividuel" ></div>
+      <div class="div3 divindividuel" ></div>
+      <div class="div4 divindividuel" ></div>
       </div>
     `;
     const div = document.querySelectorAll('#div div'); 
-    div[0].classList = "divindividuel"
-    div[1].classList = "divindividuel"
-    div[2].classList = "divindividuel"
-    div[3].classList = "divindividuel"
 
 
     setDebut(div, resulat)

@@ -25,7 +25,7 @@ export function goChronos(){
 
 export function daffichagerBarreTime(div){
     const ligneChronos = document.querySelector('.timer-container')
-    div[1].removeChild(ligneChronos);
+    div[0].removeChild(ligneChronos);
 
 }
 
@@ -36,7 +36,7 @@ export function barreTime(div, resulat){
         const timerBar = document.createElement("div")
         timerContainer.classList ="timer-container"
         timerBar.classList ="timer-bar"
-        div[1].appendChild(timerContainer)
+        div[0].appendChild(timerContainer)
         timerContainer.appendChild(timerBar)
         if( getVie() === 0){
             supprimerVie(div)

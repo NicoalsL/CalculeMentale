@@ -1,27 +1,26 @@
 nav{
     max-width: 100vw;
     width: 100vw;
-    height: 10vh;
+    height: 6vh;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: end; 
     border-bottom: 5px solid black;
-    background-color: rgb(208, 109, 109);
 }
 
 .navUl {
-    margin: 0;
+    margin: 0 20px ;
     padding: 0;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: end;
     /* border-bottom: 5px solid black;    
     background-color: rgb(155, 80, 80);  */
     height: 100%;
-    width: 30vw;
-    background-color: rgb(114, 208, 109);
+    width: 40vw;
+    /* background-color: rgb(114, 208, 109); */
 
 }
   
@@ -32,10 +31,10 @@ nav{
     align-items: center;
     margin: 0;
     padding: 0;
-    height: 50%;
+    height: 40%;
     border: 5px solid black;
     border-radius: 15px 15px 0px 0px;
-    background-color: rgb(109, 140, 208);
+    background-color: #6455F2;
     margin: -5px -3px;
 
 }
@@ -52,78 +51,56 @@ nav ul li a {
   
 }
 
-  
-.classInput:focus {
-    outline-width: 0;
-    box-shadow: none !important;
-    transform: translate(5px, 5px) !important;
-  }
-
   .contenaireTitre{
-    background-color: #F2D83D;
+    margin: 0 20px ;
+    /* background-color: #F2D83D; */
     height: 100%;
-    width: 20vw;
+    width: 40vw;
     padding: 0;
-    margin: 0;
     display: flex;
     align-items: end;
+    justify-content: center;
 }
+
 .contenaireTitre li {
     display: flex;
     align-items: end;
     justify-content:center;
-    width: 100%;
-    background-color: #6455F2;
-}
+    height: 40%;
 
-.contenaireTitre li p {
-    font-size: 3rem;
-    display: flex;
-    align-items: end;
+    width: 90%;
+    /* background-color: #6455F2; */
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    
 }
 
-@media (max-width: 768px) {
+
+
+
+/* Title container styles */
+
+
+
+
+@media (max-width: 850px) {
+    
     .navUl {
-        flex-direction: column;
-        width: 100%;
     }
 
     .navLi {
-        width: 100%;
-        border-radius: 0;
-        margin: 0;
-        padding: 0;
+
     }
 
     nav ul li a {
-        padding: 10px;
-        font-size: 18px;
+
     }
-}
+    .contenaireTitre li p {
+        font-size: 35px;
 
-/* Title container styles */
-.contenaireTitre {
-    background-color: #F2D83D;
-    height: 100%;
-    width: 20vw;
-    display: flex;
-    align-items: flex-end;
-}
-
-.contenaireTitre li {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 100%;
-    background-color: #6455F2;
-}
-
-.contenaireTitre li p {
-    font-size: 3rem;
-    display: flex;
-    align-items: flex-end;
-    padding: 0;
-    margin: 0;
+    }
 }

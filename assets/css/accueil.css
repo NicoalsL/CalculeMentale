@@ -7,7 +7,7 @@
     flex-direction: column;
     height: 50vh;
     padding: 0 10vw ;
-
+    background-color: #F2D83D;
 }
 .hero h1{
     margin: 0;
@@ -27,7 +27,7 @@
     box-shadow: 5px 5px 0 #000000;
     background-color: #6455F2;
     border-radius: 50px;
-    padding: 20px;
+    padding: 50px;
 
 }
 .heroTexte{
