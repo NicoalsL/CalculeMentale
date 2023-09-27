@@ -9,18 +9,18 @@ import { getTours } from '../scoring/tour.js'
 import { addTableauCalcule } from '../scoring/tableauCalcule.js'
 
 export function setAffichageJeu( div, resulat ) {
-
+    
     console.log(getTours())
     afficherCalcule(div)
     refreshChronos()
     getArithmétique(resulat)
     resulat = getArithmétique(resulat)
     afficherVie(div)
-    barreTime(div, resulat)
+    const input = document.querySelector('.classInput')
+    barreTime(div, resulat, getTours(), resulat.nombreUn, resulat.nombreDeux, resulat.typeOperation, resulat.resulat, parseInt(input.value))
     reponseFalse()
     
 
-    const input = document.querySelector('.classInput')
     if( input !== null){
 
         input.addEventListener("keypress", (event) => {
@@ -28,7 +28,7 @@ export function setAffichageJeu( div, resulat ) {
                 reponseTrue()
                 calculeTrue()
                 // daffichagerChronos(div)
-                addTableauCalcule(getTours(), resulat.nombreUn, resulat.nombreDeux, resulat.typeOperation, resulat.resulat, parseInt(input.value))
+                addTableauCalcule(getTours(), resulat.nombreUn, resulat.nombreDeux, resulat.typeOperation, resulat.resulat, parseInt(input.value), false)
                 regle( div, resulat.resulat, resulat.typeOperation)
             }}
             )

@@ -5,7 +5,7 @@ export function getTableauCalcule(){
     return tableauCalcule
 }
 
-export function addTableauCalcule( tours, nombre1, nombre2, operateur, resultat, resultatJoueur){
+export function addTableauCalcule( tours, nombre1, nombre2, operateur, resultat, resultatJoueur, isDefaiteChrono){
 
     const reussi = resultat === resultatJoueur;
 

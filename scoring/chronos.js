@@ -7,6 +7,7 @@ import { getVie } from "./vie";
 import { addTours } from "./tour";
 import { rejouer } from "../etats/rejouer";
 import { jeuPasFini, getJeuFini, jeuFin } from "./jeuFini";
+import { addTableauCalcule } from "./tableauCalcule";
 export let chronos = 10;
 
 export function getChronos(){
@@ -30,7 +31,7 @@ export function daffichagerBarreTime(div){
 }
 
 
-export function barreTime(div, resulat){
+export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resultat, resultatJoueur){
 
         const timerContainer = document.createElement("div")
         const timerBar = document.createElement("div")
@@ -59,6 +60,7 @@ export function barreTime(div, resulat){
         perdreVie() 
         addTours()
         pageScore(div, resulat)
+        addTableauCalcule(tours, nombre1, nombre2, operateur, resultat, resultatJoueur, true)
     } 
 
       if (getChronos() === 0 || getReponse()== true) {
