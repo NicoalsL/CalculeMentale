@@ -6,11 +6,12 @@ import { addDefaite } from "../scoring/defaite";
 import { jeuFin, jeuPasFini } from "../scoring/jeuFini";
 import { reiniTours } from "../scoring/tour";
 import { getTableauCalcule, reiniTableauCalcule } from "../scoring/tableauCalcule";
+import { restatDifficulter } from "../scoring/arithmétique";
 export function rejouer(div, resulat){
     jeuFin()
     const rejouer = document.createElement('button');
     rejouer.innerText = "Rejouer"
-    rejouer.classList = "rejouer"
+    rejouer.classList = "btn-rejouer"
     div[2].appendChild(rejouer)
     const h2 = document.createElement('h2')
     h2.innerHTML = `Score : ${getScore()} `
@@ -18,7 +19,7 @@ export function rejouer(div, resulat){
 
     const resultat = document.createElement('button');
     resultat.innerText = "Resultat"
-    resultat.classList = "resultat"
+    resultat.classList = "btn-resultat"
     div[2].appendChild(resultat)
 
     resultat.addEventListener('click', () =>  {
@@ -50,7 +51,13 @@ export function rejouer(div, resulat){
                   texTours.innerText = `${ligne.tours}`;
 
                   const affDetails = document.createElement('div');
-                  affDetails.innerText = `${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = ${ligne.resultat},${ligne.resultatJoueur}`;
+                  if( ligne.isDefaiteChrono == false){
+
+                    affDetails.innerText = `${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = ${ligne.resultat} ${ligne.resultatJoueur}`;
+                  }else{
+                    affDetails.innerText = `${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = ${ligne.resultat} `;
+
+                  }
                   affichage.appendChild(affDetails); // Ajoutez affDetails en tant qu'enfant de affichage
                 });
               }
@@ -58,7 +65,6 @@ export function rejouer(div, resulat){
           });
           
 
-         
     })
 
     rejouer.addEventListener('click', () =>  {
@@ -67,12 +73,13 @@ export function rejouer(div, resulat){
         addDefaite()
         div[1].removeChild(h2)
         div[2].removeChild(rejouer)
-        const resulat = document.querySelector('.resultat');
+        const resulat = document.querySelector('.btn-resultat');
 
         div[2].removeChild(resulat)
         reiniTableauCalcule()
         reinitialiserScore()
         reinitialiserVies()
+        restatDifficulter()
         setAffichageJeu(div, resulat)   
 
         const affichageul = div[3].querySelector('ul');

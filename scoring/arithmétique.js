@@ -1,4 +1,30 @@
 import { setRandom } from "./Random";
+
+export let multiplicateurUn = 10
+export let multiplicateurDeux = 10
+
+export function getMultiplicateurUn(){
+    return multiplicateurUn
+}
+
+export function getMultiplicateurDeux(){
+    return multiplicateurDeux
+}
+
+export function setMultiplicateurUn(nbr){
+    multiplicateurUn = nbr
+}
+
+export function setMultiplicateurDeux(nbr){
+    multiplicateurDeux = nbr
+}
+export function restatDifficulter(){
+    multiplicateurUn = 10
+    multiplicateurDeux = 10
+}
+
+
+
 export function getArtiRandom(){
     const nombre = Math.floor(Math.random() * 3)
     return nombre
@@ -18,19 +44,19 @@ export function getArithmétique(resulat){
             console.log('+');
             typeOperation = "+";
 
-            nombreUn = setRandom(10)
-            nombreDeux = setRandom(10)
+            nombreUn = setRandom(getMultiplicateurUn())
+            nombreDeux = setRandom(getMultiplicateurDeux())
+            resulat = nombreUn + nombreDeux
             
             calcul.innerHTML = `${nombreUn} + ${nombreDeux} = `
-            resulat = nombreUn + nombreDeux
             return { nombreUn, nombreDeux, resulat, typeOperation }
     
         case 1 :
             console.log('-');
             typeOperation = "-";
 
-            nombreUn = setRandom(10)
-            nombreDeux = setRandom(10)
+            nombreUn = setRandom(getMultiplicateurUn())
+            nombreDeux = setRandom(getMultiplicateurDeux())
             resulat = nombreUn - nombreDeux
             
             calcul.innerHTML = `${nombreUn} - ${nombreDeux} = `
@@ -40,14 +66,14 @@ export function getArithmétique(resulat){
             console.log('x');
             typeOperation = "x";
 
-            nombreUn = setRandom(10)
-            nombreDeux = setRandom(10)
+            nombreUn = setRandom(getMultiplicateurUn())
+            nombreDeux = setRandom(getMultiplicateurDeux())
             resulat = nombreUn * nombreDeux
             
             calcul.innerHTML = `${nombreUn} x ${nombreDeux} = `
             return { nombreUn, nombreDeux, resulat, typeOperation }
 
-           default:
+            default:
                 console.log(`Sorry, we are out of ${random}.`);
               }
         }

@@ -25,7 +25,11 @@ const indexPage = () => {
       </div>
       <button class="neubrutalism"><a class="buttonA" href="/jeu" onclick="navigateTo('/jeu'); return false;">Jouez Maintenant</a></button>
     </div>
+    
     </div>
+    <button class="btn-resultat">Resultat</button>
+    <button class="btn-rejouer">Resultat</button>
+
 
 
     

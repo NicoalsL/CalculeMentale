@@ -39,10 +39,10 @@ export function regle(div, resulat, typeOperation){
             break
             }
 
-       supprimerVie(div)
-       supprimerCalcule(div)
-       daffichagerBarreTime(div)
-       pageScore(div)
+        supprimerVie(div)
+        supprimerCalcule(div)
+        daffichagerBarreTime(div)
+        pageScore(div)
 
         }else{
             console.log("Mauvaise reponse", "chrono", getChronos())

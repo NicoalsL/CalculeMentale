@@ -6,6 +6,10 @@ export function getTableauCalcule(){
 }
 
 export function addTableauCalcule( tours, nombre1, nombre2, operateur, resultat, resultatJoueur, isDefaiteChrono){
+    if( isNaN(resultatJoueur)){
+        console.log("NAAANN")
+        resultatJoueur = 0
+    }
 
     const reussi = resultat === resultatJoueur;
 
@@ -17,7 +21,9 @@ export function addTableauCalcule( tours, nombre1, nombre2, operateur, resultat,
         resultat,
         resultatJoueur,
         reussi,
+        isDefaiteChrono,
       };
+      console.log(calculEtResultat)
     tableauCalcule.push(calculEtResultat)
     console.log(getTableauCalcule())
 }

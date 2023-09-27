@@ -7,10 +7,11 @@ import { reponseFalse, reponseTrue } from '../scoring/reponse.js'
 import { barreTime,refreshChronos } from '../scoring/chronos.js'
 import { getTours } from '../scoring/tour.js'
 import { addTableauCalcule } from '../scoring/tableauCalcule.js'
-
+import { setDifficulter } from '../scoring/difficulter.js'
 export function setAffichageJeu( div, resulat ) {
     
     console.log(getTours())
+    setDifficulter()
     afficherCalcule(div)
     refreshChronos()
     getArithmétique(resulat)

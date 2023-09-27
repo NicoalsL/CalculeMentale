@@ -114,6 +114,9 @@
     border-radius: 5px; 
     font-size: 24px;
     position: relative;
+    width: 150px;
+    text-align: center;
+    
   }
   .affTours{
     display: flex;
@@ -140,7 +143,7 @@
   }
   
   .false{
-    background-color: #cc022e;
+    background-color: #ff184a;
   }
 
   .div1{
