@@ -22,7 +22,7 @@ export function setAffichageJeu( div, resulat ) {
     reponseFalse()
     
 
-    if( input !== null){
+    if( input !== null ){
 
         input.addEventListener("keypress", (event) => {
             if (event.key === "Enter") {

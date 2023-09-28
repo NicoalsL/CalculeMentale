@@ -55,8 +55,8 @@ export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resu
       timerBar.style.width = progress + "%";
       if( getChronos() === 0 &&  getVie() !== 0){
         console.log("CHRONOS SUPPRIERM VIE", div)
-        supprimerVie(div)
         supprimerCalcule(div)
+        supprimerVie(div)
         daffichagerBarreTime(div)
         perdreVie() 
         addTours()

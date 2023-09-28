@@ -1,5 +1,5 @@
 import { pageScore } from "./etats/score"
-import { getVie, perdreVie, supprimerVie } from "./scoring/vie"
+import { getVie, perdreVie, supprimerVie, afficherVie } from "./scoring/vie"
 import { ajoutScore } from "./scoring/score"
 import { defaite } from "./etats/defaite"
 import { rejouer } from "./etats/rejouer"
@@ -58,7 +58,8 @@ export function regle(div, resulat, typeOperation){
                 addTours()
                 addErreurs()
                 perdreVie()
-                classVie.innerHTML = `Vie : ${getVie()}`
+                console.log("aaaaaa")
+
                 classInput.value = []
                 supprimerVie(div)
                 supprimerCalcule(div)

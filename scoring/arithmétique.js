@@ -47,7 +47,6 @@ export function getArithmétique(resulat){
             nombreUn = setRandom(getMultiplicateurUn())
             nombreDeux = setRandom(getMultiplicateurDeux())
             resulat = nombreUn + nombreDeux
-            
             calcul.innerHTML = `${nombreUn} + ${nombreDeux} = `
             return { nombreUn, nombreDeux, resulat, typeOperation }
     
@@ -66,9 +65,21 @@ export function getArithmétique(resulat){
             console.log('x');
             typeOperation = "x";
 
-            nombreUn = setRandom(getMultiplicateurUn())
-            nombreDeux = setRandom(getMultiplicateurDeux())
+            nombreUn = setRandom(Math.round(getMultiplicateurUn()))
+            nombreDeux = setRandom(Math.round(getMultiplicateurDeux()))
+
+            if(nombreUn >= 10){
+                console.log("iiif")
+                nombreUn = Math.floor(nombreUn / 2);
+            }
+
+            if(nombreDeux >=10){
+                console.log("iiifdeux")
+
+                nombreDeux = Math.floor(nombreDeux / 2);
+            }
             resulat = nombreUn * nombreDeux
+            console.log('RESUULTEAT', resulat)
             
             calcul.innerHTML = `${nombreUn} x ${nombreDeux} = `
             return { nombreUn, nombreDeux, resulat, typeOperation }

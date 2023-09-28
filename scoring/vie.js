@@ -23,6 +23,7 @@ export function ajoutVie(){
 //     afiVie.innerHTML = `Vie : ${getVie()}`
 // }
 // Créez une fonction pour générer la chaîne HTML des cœurs
+
 function genererCoeurs(nombreDeVies) {
     let coeursHTML = '';
     for (let i = 0; i < nombreDeVies; i++) {
