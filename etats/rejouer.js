@@ -13,7 +13,7 @@ export function rejouer(div, resulat){
     rejouer.innerText = "Rejouer"
     rejouer.classList = "btn-rejouer"
     div[2].appendChild(rejouer)
-    const h2 = document.createElement('h2')
+    const h2 = document.createElement('p')
     h2.innerHTML = `Score : ${getScore()} `
     div[1].appendChild(h2)
 
@@ -22,7 +22,6 @@ export function rejouer(div, resulat){
     resultat.classList = "btn-resultat"
     div[2].appendChild(resultat)
 
-    resultat.addEventListener('click', () =>  {
         resultat.addEventListener('click', () => {
             // Vérifiez si l'élément ul existe déjà dans la div[3].
             const affichageul = div[3].querySelector('ul');
@@ -60,12 +59,14 @@ export function rejouer(div, resulat){
                   }
                   affichage.appendChild(affDetails); // Ajoutez affDetails en tant qu'enfant de affichage
                 });
+              } else {
+
+                div[3].removeChild(affichageul);
+
               }
               
           });
           
-
-    })
 
     rejouer.addEventListener('click', () =>  {
         reiniTours()

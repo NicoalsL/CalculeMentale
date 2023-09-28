@@ -73,11 +73,11 @@ export function getArithmétique(resulat){
                 nombreUn = Math.floor(nombreUn / 2);
             }
 
-            if(nombreDeux >=10){
+            if(nombreDeux >= 10){
                 console.log("iiifdeux")
-
                 nombreDeux = Math.floor(nombreDeux / 2);
             }
+            
             resulat = nombreUn * nombreDeux
             console.log('RESUULTEAT', resulat)
             

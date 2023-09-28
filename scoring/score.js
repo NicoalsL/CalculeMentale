@@ -1,5 +1,3 @@
-import { func } from "prop-types";
-
 let score = 0;
 
 export function getScore() {
@@ -21,4 +19,3 @@ export function ajoutScore(nbr){
 export function scored(){
     score = score + ( 1 + 1 )
 }
-// tour / multiplicateur / 

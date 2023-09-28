@@ -2,7 +2,7 @@ import { getScore } from "../scoring/score"
 import { setAffichageJeu } from "./jeu"
 
 export function pageScore(div, regle){
-    const ligneScore = document.createElement('h1')
+    const ligneScore = document.createElement('p')
     div[1].appendChild(ligneScore)
 
     ligneScore.classList = "classLigneScore"
