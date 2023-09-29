@@ -3,9 +3,10 @@ import { setAffichageJeu } from "./jeu"
 
 export function pageScore(div, regle){
     const ligneScore = document.createElement('p')
+    
     div[1].appendChild(ligneScore)
-
-    ligneScore.classList = "classLigneScore"
+    
+    ligneScore.classList = "ligne-score"
     ligneScore.innerHTML =`Score: ${getScore()}`
 
     tempsScore(div, regle)

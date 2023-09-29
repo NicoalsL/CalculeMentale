@@ -24,20 +24,22 @@ export function regle(div, resulat, typeOperation){
         if( resulat === parseInt(classInput.value)){
             addTours()
             
-            switch (typeOperation) {
-            case "+" :
-            console.log('+');
-            ajoutScore(100)
-            break
-            case "-" :
-            console.log('-');
-            ajoutScore(200)
-            break
-            case "x" :
-            console.log('x');
-            ajoutScore(500)
-            break
-            }
+            ajoutScore(typeOperation)
+
+            // switch (typeOperation) {
+            // case "+" :
+            // console.log('+');
+            // ajoutScore(100)
+            // break
+            // case "-" :
+            // console.log('-');
+            // ajoutScore(200)
+            // break
+            // case "x" :
+            // console.log('x');
+            // ajoutScore(500)
+            // break
+            // }
 
         supprimerVie(div)
         supprimerCalcule(div)
