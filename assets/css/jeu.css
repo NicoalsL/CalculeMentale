@@ -1,5 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
-  .btn-start {
+
+
+
+
+.div1{
+  background-color: #02cc8f;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.div2{
+  background-color: #02cc8f;
+  height: 10vh;
+}
+.div3{
+  background-color: #02cc8f;
+  height: 25vh;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 45px;
+}
+.div4{
+  background-color: #5a02cc;
+  height: 45vh;
+}
+
+
+
+/** 
+*********************************************************************************************************************************************
+********************************* Div 1 *******************************************************************************************************
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+**/
+
+
+
+.timer-container {
+  width: 600px;
+  height: 40px;
+  background-color: #ccc;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 #000000;
+  border: #000000 3px solid;
+  margin: 10px;
+}
+
+.timer-bar {
+  width: 0; 
+  height: 100%;
+  background: linear-gradient(to right, #2ecc71, #1abc9c); /* Dégradé de vert émeraude */
+  position: absolute;
+  transition: width 1s linear;
+  border: 1px solid #2ecc71; 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+  .timer-bar-rouge{
+    background: linear-gradient(to right, #dd5959, #bc1a1a) !important; /* Dégradé de vert émeraude */
+    border: 1px solid #dd5959 !important; 
+
+  }
+
+
+
+/** 
+*********************************************************************************************************************************************
+********************************* Div 2 *******************************************************************************************************
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+**/
+
+
+.ligne-score{
+  font-size: 35px;
+}
+
+
+/** 
+*********************************************************************************************************************************************
+********************************* Div 3 *******************************************************************************************************
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+**/
+
+
+.btn-start {
   /* background-color: #02cc8f; */
   background-color: #F2D83D;
   box-shadow: 5px 5px 0 #000000;
@@ -24,55 +111,83 @@
     transform: translate(5px, 5px) !important;
   }
 
-  .timer-container {
-    width: 600px;
-    height: 40px;
-    background-color: #ccc;
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 5px 5px 0 #000000;
-    border: #000000 3px solid;
-    margin: 10px;
-  }
-  
-  .timer-bar {
-    width: 0; 
-    height: 100%;
-    background: linear-gradient(to right, #2ecc71, #1abc9c); /* Dégradé de vert émeraude */
-    position: absolute;
-    transition: width 1s linear;
-    border: 1px solid #2ecc71; 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    }
+.classInput{
+  box-shadow: 5px 5px 0 #000000;
+  background-color: transparent;
+  border: none;
+  margin: 10px;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  border-bottom: #000000 4px solid;
+  border-radius: 5px;  
+  cursor: pointer;
+  font-family: 'Bricolage Grotesque', sans-serif !important;  
+  width: 200px;
+  height: 100px;
+  display: flex;
+  outline-width: 0;
+  box-shadow: none !important;
+  transform: translate(5px, 5px) !important;
+  font-size: 65px !important;
+  text-align: center;
+}
 
-    .classInput{
-        box-shadow: 5px 5px 0 #000000;
-        background-color: transparent;
-        border: none;
-        margin: 10px;
-        padding: 0;
-        color: rgb(0, 0, 0);
-        font-family: sans-serif;
-        border-bottom: #000000 4px solid;
-        border-radius: 5px;  
-        cursor: pointer;
-        font-family: 'Bricolage Grotesque', sans-serif !important;  
-        width: 200px;
-        height: 100px;
-        display: flex;
-        outline-width: 0;
-        box-shadow: none !important;
-        transform: translate(5px, 5px) !important;
-        font-size: 65px !important;
-        text-align: center;
-    }
-    
-    .classCalcul{
-      font-size: 65px;
-      font-family: 'Bricolage Grotesque', sans-serif !important;  
+.classCalcul{
+font-size: 65px;
+font-family: 'Bricolage Grotesque', sans-serif !important;  
 
-    } 
+} 
+
+
+/** 
+*********************************************************************************************************************************************
+********************************* Div 4 *******************************************************************************************************
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+**/
+
+.ligne-resultat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+
+}
+.cercle-rouge{
+  background-color: #ff1837;
+  border-radius: 150px;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+
+}
+.cercle-vert{
+  background-color: #02cc8f;
+  border-radius: 150px;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** 
+*********************************************************************************************************************************************
+********************************* Div  *******************************************************************************************************
+*********************************************************************************************************************************************
+*********************************************************************************************************************************************
+**/
+
 
     /* h1, input {
       font-size: 45px;
@@ -104,28 +219,32 @@
     align-items: center;
     justify-content: top;
     height: 300px;
-    width: 250px;
+    width: 350px;
     overflow: auto;
     box-shadow: 5px 5px 0 #000000;
     border: #000000 3px solid;
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: white;
     border-radius: 5px; 
   }
   
   .divindividuel ul li {
     list-style: none; 
-    margin: 10px;
-    padding: 15px;
-    box-shadow: 5px 5px 0 #000000;
-    border: #000000 3px solid;
-    border-radius: 5px; 
+    margin: 15px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 0 #458cff;
+    border: #458cff 3px solid;
+    border-radius: 15px; 
     font-size: 24px;
     position: relative;
-    width: 150px;
+    width: 200px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
   }
+
   .affTours{
     display: flex;
     justify-content: center;
@@ -133,7 +252,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0); /* Couleur de fond pour la pastille */
+    background-color: #458cff; /* Couleur de fond pour la pastille */
     height: 30px;
     width: 30px;
     color: rgb(255, 255, 255); /* Couleur du texte de la pastille */
@@ -145,40 +264,27 @@
     font-weight: bold;
   }
 
-  .ligne-score{
-    font-size: 35px;
-  }
 
   
 .correcte{
-    background-color: #02cc8f;
-  
+    /* background-color: #02cc8f; */
+
+    /* box-shadow: 5px 5px 0 #02cc8f !important;
+    border: #02cc8f 3px solid !important;  */
   }
   
   .false{
-    background-color: #ff1837;
+    /* background-color: #ff1837; */
+
+     /* box-shadow: 5px 5px 0 #ff1837 !important;
+    border: #ff1837 3px solid !important;  */
   }
 
-  .div1{
-    background-color: #02cc8f;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-  }
-  .div2{
-    background-color: #02cc8f;
-    height: 10vh;
-  }
-  .div3{
-    background-color: #02cc8f;
-    height: 25vh;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 45px;
-  }
-  .div4{
-    background-color: #5a02cc;
-    height: 45vh;
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none; /* Masque les flèches dans Safari et Chrome */
+      appearance: none; /* Masque les flèches dans les autres navigateurs basés sur Webkit */
+      margin: 0; /* Supprime la marge par défaut */
   }
 
   
@@ -210,3 +316,5 @@
  */
 
 }
+
+

@@ -1,5 +1,4 @@
 import { setRandom } from "./Random";
-
 export let multiplicateurUn = 10
 export let multiplicateurDeux = 10
 

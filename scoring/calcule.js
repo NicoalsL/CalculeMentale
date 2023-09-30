@@ -4,6 +4,7 @@ export function afficherCalcule(div){
     calcul.classList = "classCalcul"
     div[2].appendChild(calcul)
     const input = document.createElement('input')
+    input.setAttribute("type", "number")
     div[2].appendChild(input).focus()
     input.classList = "classInput"
 }

@@ -8,7 +8,7 @@ import { addTours } from "./tour";
 import { rejouer } from "../etats/rejouer";
 import { jeuPasFini, getJeuFini, jeuFin } from "./jeuFini";
 import { addTableauCalcule } from "./tableauCalcule";
-export let chronos = 10;
+export let chronos = 0;
 
 export function getChronos(){
     return chronos
@@ -16,12 +16,13 @@ export function getChronos(){
 
 
 export function refreshChronos(){
-    chronos = 10;
+    chronos = 0;
 
 }
 
 export function goChronos(){
-    chronos--
+    chronos++
+    console.log(chronos)
 }
 
 export function daffichagerBarreTime(div){
@@ -49,11 +50,15 @@ export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resu
         if (getJeuFini() === true){
             clearInterval(intervalId); 
         }
+        if ( getChronos() >= 7){
+        timerBar.classList.add('timer-bar-rouge')
+        }
 
-      goChronos();
-      const progress = ((10 - getChronos()) / 10) * 100;
-      timerBar.style.width = progress + "%";
-      if( getChronos() === 0 &&  getVie() !== 0){
+        goChronos();
+       const progress =  (getChronos() / 10) * 100;
+    timerBar.style.width = progress + "%";
+    console.log(progress)
+    if( getChronos() === 10 &&  getVie() !== 0){
         console.log("CHRONOS SUPPRIERM VIE", div)
         supprimerCalcule(div)
         supprimerVie(div)
@@ -64,7 +69,7 @@ export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resu
         addTableauCalcule(tours, nombre1, nombre2, operateur, resultat, resultatJoueur, true)
     } 
 
-      if (getChronos() === 0 || getReponse()== true) {
+    if (getChronos() === 10 || getReponse()== true) {
         refreshChronos()
         clearInterval(intervalId);
     }

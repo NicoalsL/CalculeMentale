@@ -7,6 +7,7 @@ import { jeuFin, jeuPasFini } from "../scoring/jeuFini";
 import { reiniTours } from "../scoring/tour";
 import { getTableauCalcule, reiniTableauCalcule } from "../scoring/tableauCalcule";
 import { restatDifficulter } from "../scoring/arithmétique";
+import { restatScoreMultiplicateur } from "../scoring/difficulter";
 export function rejouer(div, resulat){
     jeuFin()
     const rejouer = document.createElement('button');
@@ -17,12 +18,12 @@ export function rejouer(div, resulat){
     h2.innerHTML = `Score : ${getScore()} `
     div[1].appendChild(h2)
 
-    const resultat = document.createElement('button');
-    resultat.innerText = "Resultat"
-    resultat.classList = "btn-resultat"
-    div[2].appendChild(resultat)
+    const result = document.createElement('button');
+    result.innerText = "Resultat"
+    result.classList = "btn-resultat"
+    div[2].appendChild(result)
 
-        resultat.addEventListener('click', () => {
+        result.addEventListener('click', () => {
             // Vérifiez si l'élément ul existe déjà dans la div[3].
             const affichageul = div[3].querySelector('ul');
             
@@ -51,12 +52,16 @@ export function rejouer(div, resulat){
 
                   const affDetails = document.createElement('div');
                   if( ligne.isDefaiteChrono == false){
-
-                    affDetails.innerText = `${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = ${ligne.resultat} ${ligne.resultatJoueur}`;
+                    if( ligne.reussi === true){
+                      affDetails.innerHTML = `
+                      <span class="ligne-resultat">${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = <span class="cercle-vert">${ligne.resultatJoueur}</span></span>`;
+                    }else{
+                      affDetails.innerHTML = `<span class="ligne-resultat">${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = <span class="cercle-vert">${ligne.resultat}</span> <span class="cercle-rouge">${ligne.resultatJoueur}</span></span>`;
+                    }
                   }else{
-                    affDetails.innerText = `${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = ${ligne.resultat} `;
-
+                    affDetails.innerHTML = `<span class="ligne-resultat">${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = <span class="cercle-vert">${ligne.resultat}</span> </span>`;
                   }
+                  
                   affichage.appendChild(affDetails); // Ajoutez affDetails en tant qu'enfant de affichage
                 });
               } else {
@@ -74,14 +79,15 @@ export function rejouer(div, resulat){
         addDefaite()
         div[1].removeChild(h2)
         div[2].removeChild(rejouer)
-        const resulat = document.querySelector('.btn-resultat');
+        const result = document.querySelector('.btn-resultat');
 
-        div[2].removeChild(resulat)
+        div[2].removeChild(result)
         reiniTableauCalcule()
         reinitialiserScore()
         reinitialiserVies()
         restatDifficulter()
-        setAffichageJeu(div, resulat)   
+        restatScoreMultiplicateur()
+        setAffichageJeu(div, result)   
 
         const affichageul = div[3].querySelector('ul');
         if (affichageul) {
