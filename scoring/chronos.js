@@ -60,6 +60,7 @@ export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resu
     console.log(progress)
     if( getChronos() === 10 &&  getVie() !== 0){
         console.log("CHRONOS SUPPRIERM VIE", div)
+        console.log("CHRONOS SUPPRIERM VIE", div)
         supprimerCalcule(div)
         supprimerVie(div)
         daffichagerBarreTime(div)
