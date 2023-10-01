@@ -46,9 +46,10 @@ export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resu
             daffichagerBarreTime(div)
             rejouer(div, resulat)    
         }
-    const intervalId = setInterval(() => {
+    const intervalId = setTimeout(() => {
         if (getJeuFini() === true){
-            clearInterval(intervalId); 
+            console.log("jeu fini")
+            clearTimeout(intervalId); 
         }
         if ( getChronos() >= 7){
         timerBar.classList.add('timer-bar-rouge')
@@ -71,7 +72,9 @@ export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resu
 
     if (getChronos() === 10 || getReponse()== true) {
         refreshChronos()
-        clearInterval(intervalId);
+        console.log("chrono 10")
+
+        clearTimeout(intervalId);
     }
-    }, 1000);
-  }
+    }, 10000);
+}
