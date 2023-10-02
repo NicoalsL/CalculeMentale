@@ -1,27 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
 
 
-
+.retour{
+  margin: 15px;
+  text-decoration: none;
+}
+.retour a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
 
 .div1{
-  background-color: #02cc8f;
+  /* background-color: #02cc8f; */
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: start;
 }
 .div2{
-  background-color: #02cc8f;
+  /* background-color: #02cc8f; */
   height: 10vh;
 }
 .div3{
-  background-color: #02cc8f;
+  /* background-color: #02cc8f; */
   height: 25vh;
   font-family: 'Rajdhani', sans-serif;
   font-size: 45px;
 }
 .div4{
-  background-color: #5a02cc;
+  /* background-color: #5a02cc; */
   height: 45vh;
 }
 
@@ -42,7 +52,7 @@
   background-color: #ccc;
   position: relative;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 5px 5px 0 #000000;
   border: #000000 3px solid;
   margin: 10px;
@@ -54,12 +64,14 @@
   background: linear-gradient(to right, #2ecc71, #1abc9c); /* Dégradé de vert émeraude */
   position: absolute;
   transition: width 1s linear;
-  border: 1px solid #2ecc71; 
+  /* border: 1px solid #2ecc71;  */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 10px 10px 0px;
   }
+  
   .timer-bar-rouge{
     background: linear-gradient(to right, #dd5959, #bc1a1a) !important; /* Dégradé de vert émeraude */
-    border: 1px solid #dd5959 !important; 
+    /* border: 1px solid #dd5959 !important;  */
 
   }
 
@@ -77,7 +89,9 @@
   font-size: 35px;
 }
 
-
+.p-score{
+  font-size: 35px;
+}
 /** 
 *********************************************************************************************************************************************
 ********************************* Div 3 *******************************************************************************************************
@@ -87,20 +101,16 @@
 
 
 .btn-start {
-  /* background-color: #02cc8f; */
   background-color: #F2D83D;
   box-shadow: 5px 5px 0 #000000;
   border: none;
   margin: 10px;
   padding: 10px 25px;
-  color: white;
   font-family: sans-serif;
   border: #000000 3px solid;
-  border-radius: 5px; 
+  border-radius: 15px; 
   cursor: pointer;
   font-family: 'Bricolage Grotesque', sans-serif !important;  
-  /* width: 150px; */
-  height: 50px;
   font-size: 24px;
   color: #000000;
   text-align: center;
@@ -231,7 +241,7 @@ font-family: 'Bricolage Grotesque', sans-serif !important;
   .divindividuel ul li {
     list-style: none; 
     margin: 15px;
-    padding: 5px 10px;
+    padding: 15px 25px;
     box-shadow: 5px 5px 0 #458cff;
     border: #458cff 3px solid;
     border-radius: 15px; 

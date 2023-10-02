@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 100vh;
     padding: 0 10vw ;
     background-color: #F2D83D;
 }
@@ -32,8 +32,10 @@
 }
 .heroTexte{
     text-align: center;
-    width: 55vw;
+    width: 500px;
+    padding: 10px;
     margin-bottom: 20px;
+    background-color: #4076ff;
 }
 
 .heroTexte p {
@@ -41,17 +43,20 @@
     color: white;
 }
 
+
+
+
 .btn-resultat{
     /* background-color: #02cc8f; */
     background-color: #ffffff;
-    box-shadow: 5px 5px 0 #6455F2;
+    box-shadow: 5px 5px 0 #000000;
     border: none;
     margin: 10px;
     padding: 10px 25px;
-    color: #6455F2;
+    color: #000000;
     font-family: sans-serif;
-    border: #6455F2 3px solid;
-    border-radius: 5px; 
+    border: #000000 3px solid;
+    border-radius: 15px; 
     cursor: pointer;
     font-family: 'Bricolage Grotesque', sans-serif !important;  
     /* width: 150px; */
@@ -70,14 +75,14 @@
 .btn-rejouer{
   /* background-color: #02cc8f; */
   background-color: #ffffff;
-  box-shadow: 5px 5px 0 #000000;
+  box-shadow: 5px 5px 0 #4076ff;
   border: none;
   margin: 10px;
   padding: 10px 25px;
-  color: #000000;
+  color: #4076ff;
   font-family: sans-serif;
-  border: #000000 3px solid;
-  border-radius: 5px; 
+  border: #4076ff 3px solid;
+  border-radius: 15px; 
   cursor: pointer;
   font-family: 'Bricolage Grotesque', sans-serif !important;  
   /* width: 150px; */

@@ -14,9 +14,10 @@ export function rejouer(div, resulat){
     rejouer.innerText = "Rejouer"
     rejouer.classList = "btn-rejouer"
     div[2].appendChild(rejouer)
-    const h2 = document.createElement('p')
-    h2.innerHTML = `Score : ${getScore()} `
-    div[1].appendChild(h2)
+    const pscore = document.createElement('p')
+    pscore.classList.add('p-score')
+    pscore.innerHTML = `Score : ${getScore()} `
+    div[1].appendChild(pscore)
 
     const result = document.createElement('button');
     result.innerText = "Resultat"
@@ -61,7 +62,7 @@ export function rejouer(div, resulat){
                   }else{
                     affDetails.innerHTML = `<span class="ligne-resultat">${ligne.nombre1} ${ligne.operateur} ${ligne.nombre2} = <span class="cercle-vert">${ligne.resultat}</span> </span>`;
                   }
-                  
+
                   affichage.appendChild(affDetails); // Ajoutez affDetails en tant qu'enfant de affichage
                 });
               } else {
@@ -77,7 +78,7 @@ export function rejouer(div, resulat){
         reiniTours()
         jeuPasFini()
         addDefaite()
-        div[1].removeChild(h2)
+        div[1].removeChild(pscore)
         div[2].removeChild(rejouer)
         const result = document.querySelector('.btn-resultat');
 

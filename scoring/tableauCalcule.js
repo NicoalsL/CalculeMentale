@@ -22,8 +22,8 @@ export function addTableauCalcule( tours, nombre1, nombre2, operateur, resultat,
         resultatJoueur,
         reussi,
         isDefaiteChrono,
-      };
-      console.log(calculEtResultat)
+    };
+    console.log(calculEtResultat)
     tableauCalcule.push(calculEtResultat)
     console.log(getTableauCalcule())
 }

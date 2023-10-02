@@ -3,7 +3,7 @@ const indexPage = () => {
   content.innerHTML = `
     <nav>
       <ul class="contenaireTitre">
-        <li class="">
+        <li class="marque">
           <p>Astronomaths</p>
         </li>
       </ul>

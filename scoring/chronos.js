@@ -50,7 +50,7 @@ export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resu
         if (getJeuFini() === true){
             clearInterval(intervalId); 
         }
-        if ( getChronos() >= 7){
+        if ( getChronos() >= 8){
         timerBar.classList.add('timer-bar-rouge')
         }
 
@@ -58,9 +58,9 @@ export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resu
        const progress =  (getChronos() / 10) * 100;
     timerBar.style.width = progress + "%";
     console.log(progress)
-    if( getChronos() === 10 &&  getVie() !== 0){
+    if( getChronos() === 11 &&  getVie() !== 0){
         console.log("CHRONOS SUPPRIERM VIE", div)
-        console.log("CHRONOS SUPPRIERM VIE", div)
+        console.log(div[2])
         supprimerCalcule(div)
         supprimerVie(div)
         daffichagerBarreTime(div)
@@ -70,7 +70,7 @@ export function barreTime(div, resulat, tours, nombre1, nombre2, operateur, resu
         addTableauCalcule(tours, nombre1, nombre2, operateur, resultat, resultatJoueur, true)
     } 
 
-    if (getChronos() === 10 || getReponse()== true) {
+    if (getChronos() === 11 || getReponse()== true) {
         refreshChronos()
         clearInterval(intervalId);
     }

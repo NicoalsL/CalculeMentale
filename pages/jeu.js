@@ -7,6 +7,8 @@ const jeuPage = () => {
 
     const content = document.getElementById('content');
     content.innerHTML = `
+    <div class="retour"><a href="/" onclick="navigateTo('/'); return false;">X</a>
+    </div>
         <div id="div" class="start">
           <div class="div1 divindividuel"></div>
           <div class="div2 divindividuel"></div>
