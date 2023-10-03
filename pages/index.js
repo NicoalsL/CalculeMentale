@@ -19,6 +19,8 @@ const indexPage = () => {
 
     <div class="hero">
     <div class="herocontenaire">
+        <div class="shadow"></div>
+
       <div class="heroTexte">
         <h1>Astronomaths</h1>
         <p>Préparez-vous à un défi mathématique interstellaire avec Astronomaths, le jeu de calcul mental ultime.</p>
