@@ -16,16 +16,20 @@ const indexPage = () => {
   
 
 
-    <div class="hero">
-    <div class="herocontenaire">
-        <div class="shadow"></div>
-
-      <div class="heroTexte">
-        <h1>Astronomaths</h1>
-        <p>Préparez-vous à un défi mathématique interstellaire avec Astronomaths, le jeu de calcul mental ultime.</p>
-      </div>
-      <button class="neubrutalism"><a class="buttonA" href="/jeu" onclick="navigateTo('/jeu'); return false;">Jouez Maintenant</a></button>
+  <div class="hero">
+  
+  <div class="herocontenairecontenaire">
+  <div class="herocontenaire">
+    <div class="heroTexte">
+      <h1>Astronomaths</h1>
+      <p>Préparez-vous à un défi mathématique interstellaire avec Astronomaths, le jeu de calcul mental ultime.</p>
     </div>
+    <button class="neubrutalism"><a class="buttonA" href="/jeu" onclick="navigateTo('/jeu'); return false;">Jouez Maintenant</a></button>
+  </div>
+  <div class="shadow"></div>
+
+</div>
+</div>
     
     </div>
     <button class="btn-resultat">Resultat</button>

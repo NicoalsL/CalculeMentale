@@ -7,7 +7,7 @@
     flex-direction: column;
     height: 95vh;
     padding: 0 10vw ;
-    background-color: #071A52;
+    background-color: #F2F4F6;
 }
 .hero h1{
     margin: 0px;
@@ -20,7 +20,13 @@
     color: #EF476F; /* Couleur du texte */
     background-color: #F2F4F6;  
 }
+.herocontenairecontenaire{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 
+}
 .herocontenaire{
     display: flex;
     flex-direction: column;
@@ -31,7 +37,22 @@
     background-color: #3E64FF;
     border-radius: 50px;
     padding: 50px;
+    z-index: 2; 
+    height: 100%;
+    width: 100%;
+}
 
+.shadow{
+  position: absolute;
+  z-index: 1;
+  bottom: -50px;
+  right: -50px;
+  background-color: #EF476F;
+  border-radius: 50px;
+
+  border: 5px solid #000000;
+  height: 100%;
+  width: 100%;
 }
 
 .heroTexte{
@@ -100,3 +121,4 @@
   box-shadow: none !important;
   transform: translate(5px, 5px) !important;
 }
+
