@@ -1,21 +1,20 @@
 const indexPage = () => {
   const content = document.getElementById('content');
   content.innerHTML = `
-    <nav>
-      <ul class="contenaireTitre">
-        <li class="marque">
-          <p>Astronomaths</p>
-        </li>
+
+  <nav class="navbar">
+    <a class="logo" href="/" onclick="navigateTo('/'); return false;">LOGO</a>
+    <div class="nav-links">
+      <ul>
+        <li><a href="/" onclick="navigateTo('/'); return false;">Accueil</a></li>
+        <li><a href="/classement" onclick="navigateTo('/classement'); return false;">Classement</a></li>
       </ul>
-      <ul class="navUl">
-        <li class="navLi">
-          <a href="/" onclick="navigateTo('/'); return false;">Accueil</a>
-        </li>
-        <li class="navLi">
-          <a href="/classement" onclick="navigateTo('/classement'); return false;">Classement</a>
-        </li>
-      </ul>
-    </nav>
+    </div>
+  </nav>
+  <header>
+  </header>
+  
+
 
     <div class="hero">
     <div class="herocontenaire">
