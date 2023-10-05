@@ -2,6 +2,10 @@
 @import url("nav.css");
 @import url("accueil.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap');
+*{
+  font-family: 'Montserrat Alternates', sans-serif;
+}
 /* .jouer{
   background-color: #02cc8f;
   box-shadow: 0 5px 0 #08ac7b;

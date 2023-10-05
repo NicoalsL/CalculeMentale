@@ -18,9 +18,12 @@ export function setAffichageJeu( div, resulat ) {
     resulat = getArithmétique(resulat)
     afficherVie(div)
     const input = document.querySelector('.classInput')
+    const btn = document.querySelector('.btn-start')
+
     barreTime(div, resulat, getTours(), resulat.nombreUn, resulat.nombreDeux, resulat.typeOperation, resulat.resulat, parseInt(input.value))
     reponseFalse()
-    
+
+
 
     if( input !== null ){
 
@@ -31,8 +34,17 @@ export function setAffichageJeu( div, resulat ) {
                 // daffichagerChronos(div)
                 addTableauCalcule(getTours(), resulat.nombreUn, resulat.nombreDeux, resulat.typeOperation, resulat.resulat, parseInt(input.value), false)
                 regle( div, resulat.resulat, resulat.typeOperation)
-            }}
-            )
+            }})
+
+            btn.addEventListener("click", (event) => {
+                    reponseTrue()
+                    calculeTrue()
+                    // daffichagerChronos(div)
+                    addTableauCalcule(getTours(), resulat.nombreUn, resulat.nombreDeux, resulat.typeOperation, resulat.resulat, parseInt(input.value), false)
+                    regle( div, resulat.resulat, resulat.typeOperation)
+                })
+        
+
         }
 }
 
