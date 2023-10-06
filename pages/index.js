@@ -24,7 +24,7 @@ const indexPage = () => {
       <h1>Astronomaths</h1>
       <p>Préparez-vous à un défi mathématique interstellaire avec Astronomaths, le jeu de calcul mental ultime.</p>
     </div>
-    <button class="neubrutalism"><a class="buttonA" href="/jeu" onclick="navigateTo('/jeu'); return false;">Jouez Maintenant</a></button>
+    <button class="neubrutalism"><a class="buttonA" href="/jeu" onclick="navigateTo('/jeu'); return false;">Jouer Maintenant</a></button>
   </div>
   <div class="shadow"></div>
 
