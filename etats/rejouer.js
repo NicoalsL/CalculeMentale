@@ -74,7 +74,7 @@ export function rejouer(div, resulat){
           });
           
 
-    rejouer.addEventListener('click', () =>  {
+    rejouer.addEventListener('click', () => {
         reiniTours()
         jeuPasFini()
         addDefaite()

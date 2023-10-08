@@ -27,8 +27,8 @@ export function restatDifficulter(){
 export function getArtiRandom(){
     const nombre = Math.floor(Math.random() * 3)
     return nombre
-
 }
+
 export function getArithmétique(resulat){
 
     const random = Math.floor(Math.random() * 3)

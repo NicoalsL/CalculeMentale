@@ -33,6 +33,11 @@ export function setDifficulter(){
             setMultiplicateurDeux(20)
             setScoreMultiplicateur(1.5)
             break;
+        case 15:
+            setMultiplicateurUn(40)
+            setMultiplicateurDeux(30)
+            setScoreMultiplicateur(2)
+            break;
         default:
             break;
     } 
